@@ -1,25 +1,60 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import Navbar from "./components/Navbar/Navbar";
 
-function App() {
+export default function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Navbar />
+      <div>
+        <nav>
+          <ul>
+            <li>
+              <Link to="/">Home</Link>
+            </li>
+            <li>
+              <Link to="/category">Category</Link>
+            </li>
+            <li>
+              <Link to="/product">Product</Link>
+            </li>
+            <li>
+              <Link to="/search">Search</Link>
+            </li>
+          </ul>
+        </nav>
+
+        <Switch>
+          <Route path="/search">
+            <Search />
+          </Route>
+          <Route path="/category">
+            <Category />
+          </Route>
+          <Route path="/product">
+            <Product />
+          </Route>
+          <Route path="/">
+            <Home />
+          </Route>
+        </Switch>
+      </div>
+    </Router>
   );
 }
 
-export default App;
+function Home() {
+  return <h2>Home</h2>;
+}
+
+function Category() {
+  return <h2>Category</h2>;
+}
+
+function Product() {
+  return <h2>Product</h2>;
+}
+
+function Search() {
+  return <h2>Search</h2>;
+}
