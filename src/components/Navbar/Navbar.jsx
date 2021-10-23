@@ -26,6 +26,7 @@ export default function Navbar() {
         <Input placeholder="What are you looking for?">
           <Magnifier />
         </Input>
+    
       </StyledLeftSide>
       <StyledRightSide>
         <StyledLoginLink to="/login">LOG IN</StyledLoginLink>

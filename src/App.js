@@ -1,11 +1,13 @@
 import "./App.css";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import Navbar from "./components/Navbar/Navbar";
+import Submenu from "./components/Submenu/Submenu";
 
 export default function App() {
   return (
     <Router>
       <Navbar />
+      <Submenu />
       <div>
         <nav>
           <ul>
