@@ -93,6 +93,7 @@ const StyledSlider = styled.div`
 
   h2 {
     margin-left: 20px;
+    font-family: "Proba Pro";
   }
 `;
 
@@ -100,16 +101,15 @@ const StyledCategories = styled.div`
   display: flex;
   flex-direction: row;
   margin-top: 100px;
-  padding: 0 120px;
+  padding: 0 90px;
 `;
 
 const StyledSideMenu = styled.div`
-  /* margin-top: -180px; */
-  width: 20%;
+  width: 35%;
 `;
 
 const StyledCards = styled.div`
   display: flex;
   flex-direction: column;
-  width: 80%;
+  width: 75%;
 `;

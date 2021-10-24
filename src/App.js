@@ -4,12 +4,12 @@ import Category from "./pages/Category/Category";
 import Navbar from "./components/Navbar/Navbar";
 import Submenu from "./components/Submenu/Submenu";
 import Search from "./pages/Search/Search";
+import Product from "./pages/Product/Product";
 
 export default function App() {
   return (
     <Router>
       <Navbar />
-      <Submenu />
       <div>
         <Switch>
           <Route path="/search">
@@ -36,8 +36,4 @@ function Home() {
       <Link to="/category">Category</Link>
     </div>
   );
-}
-
-function Product() {
-  return <h2>Product</h2>;
 }
