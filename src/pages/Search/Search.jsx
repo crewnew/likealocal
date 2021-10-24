@@ -12,7 +12,7 @@ import {
   Configure,
   Snippet,
 } from "react-instantsearch-dom";
-import searchImg from "../../assets/search.png";
+import CardThree from "../../components/CardThree/CardThree";
 
 const searchClient = instantMeiliSearch("http://164.90.235.228/", "");
 
@@ -61,21 +61,23 @@ function Search(props) {
 }
 
 function Hit(props) {
+  console.log("props hit", props);
   return (
     <div
       style={{
         width: "100%",
-        height: "150px",
+        height: "250px",
         background: "white",
-        marginBottom: '20px',
-        boxShadow: "2px 3px 12px rgba(0, 0, 0, 0.1)",
+        marginBottom: "20px",
         borderRadius: "4px",
-        border: '3px solid blue',
       }}
     >
-      <StyledImg src={searchImg} alt="Search"/>
-      <div style={{ border: '1px solid green', position: 'relative', }}>
-        
+      <CardThree
+        title={props.hit.name}
+        author={props.hit.author_name}
+        description={props.hit.short_description}
+      />
+      <div style={{ display: "none" }}>
         <StyledHighlight key={props.hit} attribute="name" hit={props.hit} />
         <Snippet attribute="description" hit={props.hit} />
       </div>
@@ -113,9 +115,8 @@ const StyledContent = styled.div`
 `;
 
 const StyledPanels = styled.div`
-  border: 1px solid green;
   display: flex;
-  padding: 0 14%;
+  padding: 0 140px;
   ul {
     list-style-type: none;
     padding: 0;
@@ -123,8 +124,7 @@ const StyledPanels = styled.div`
 `;
 
 const StyledLeftPanel = styled.div`
-  border: 1px solid red;
-  width: 25%;
+  width: 20%;
   padding-right: 12px;
 
   .ais-RefinementList-label {
@@ -155,25 +155,21 @@ const StyledLeftPanel = styled.div`
     width: 100%;
     height: 40px;
   }
+
+  .ais-RefinementList-item--selected {
+    border-left: 3px solid red;
+    background-color: white;
+  }
+
+  .ais-RefinementList-checkbox {
+    display: none;
+  }
 `;
 
 const StyledRightPanel = styled.div`
-  border: 1px solid red;
-  width: 75%;
+  width: 80%;
 `;
 
 const StyledHighlight = styled(Highlight)`
-  border: 1px solid red;
   height: auto;
-`;
-
-const StyledHighlightWrapper = styled(Highlight)`
-  border: 1px solid green;
-`;
-
-const StyledImg = styled.img`
-  border: 1px solid green;
-  width: 30%;
-  height: 100%;
-  object-fit: cover;
 `;
