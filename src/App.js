@@ -34,6 +34,8 @@ function Home() {
   return (
     <div>
       <Link to="/category">Category</Link>
+      <Link to="/search">Search</Link>
+      <Link to="/product">Product</Link>
     </div>
   );
 }
