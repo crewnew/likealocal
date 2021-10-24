@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const StyledCard = styled.div`
-  width: 370px;
+  width: 300px;
   height: auto;
   margin: 200px;
   display: flex;
@@ -12,8 +12,8 @@ export const StyledCard = styled.div`
 `;
 
 export const StyledImage = styled.img`
-  width: 370px;
-  height: auto;
+  width: 300px;
+  height: 250px;
 `;
 
 export const StyledTitle = styled.div`

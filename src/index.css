@@ -1,31 +1,32 @@
+@import "~slick-carousel/slick/slick.css";
+@import "~slick-carousel/slick/slick-theme.css";
+
 @font-face {
   font-family: "Proxima Nova";
-  src: local("Proxima Nova"),
-    url("./fonts/Proxima Nova.otf") format("truetype");
+  src: local("Proxima Nova"), url("./fonts/ProximaNova.otf") format("truetype");
   /* font-weight: bold; */
 }
 
 @font-face {
   font-family: "Proba Pro";
   src: local("Proba Pro"),
-    url("./fonts/Proba Pro/ProbaProBold.ttf") format("truetype");
+    url("./fonts/ProbaProBold/ProbaProBold.ttf") format("truetype");
   /* font-weight: bold; */
 }
 
 @font-face {
   font-family: "Proba Pro Medium";
   src: local("Proba Pro"),
-    url("./fonts/Proba Pro/ProbaPro-Medium.otf") format("truetype");
+    url("./fonts/ProbaPro/ProbaPro-Medium.otf") format("truetype");
   /* font-weight: bold; */
 }
 
 @font-face {
   font-family: "The Secret";
   src: local("The Secret"),
-    url("./fonts/The Secret/TheSecret-Regular.ttf") format("truetype");
+    url("./fonts/TheSecret/TheSecret-Regular.ttf") format("truetype");
   /* font-weight: bold; */
 }
-
 
 * {
   margin: 0;
@@ -44,4 +45,18 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+.slick-prev:before,
+.slick-next:before {
+  color: black;
+  font-size: 35px;
+}
+
+.slick-prev {
+  left: -45px;
+}
+
+.slick-next {
+  right: -5px;
 }

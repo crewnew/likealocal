@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const StyledCard = styled.div`
   width: 370px;
   height: auto;
-  margin: 200px;
+  margin: 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -70,19 +70,15 @@ export const StyledPrice = styled.div`
   color: black;
 `;
 
-export const StyledBanner = styled.div`
+export const StyledBanner = styled.img`
   position: absolute;
   top: 10%;
   left: 0;
-  width: 80px;
-  height: 24px;
-  padding: 4px;
-  border-radius: 2px;
-  font-size: 12px;
-  font-family: 'Proba Pro';
-  color: white;
-  background-color: #FFA822;
-  text-align: center;
+  width: 130px;
+  height: 32px;
+  border-top-right-radius: 2px;
+  border-bottom-right-radius: 2px;
+  object-fit: cover;
 `;
 
 export const StyledLocals = styled.div`

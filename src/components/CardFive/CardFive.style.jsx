@@ -1,8 +1,8 @@
 import styled from "styled-components";
 
 export const StyledCard = styled.div`
-  width: 250px;
-  height: auto;
+  width: 180px;
+  height: 220px;
   margin: 200px;
   display: flex;
   flex-direction: column;
@@ -12,8 +12,8 @@ export const StyledCard = styled.div`
 `;
 
 export const StyledImage = styled.img`
-  width: 250px;
-  height: auto;
+  width: 100%;
+  height: 200px;
 `;
 
 export const StyledTitle = styled.div`
