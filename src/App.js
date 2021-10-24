@@ -7,6 +7,10 @@ import SocialMedia from "./components/SocialMedia/SocialMedia";
 import Paragraph from "./components/Paragraph/Paragraph";
 import Footer from "./components/Footer/Footer";
 import CardOne from "./components/CardOne/CardOne";
+import CardTwo from "./components/CardTwo/CardTwo";
+import CardThree from "./components/CardThree/CardThree";
+import CardFour from "./components/CardFour/CardFour";
+import CardFive from "./components/CardFive/CardFive";
 
 export default function App() {
   return (
@@ -17,6 +21,10 @@ export default function App() {
       <Submenu />
       <Paragraph />
       <CardOne />
+      <CardTwo />
+      <CardThree />
+      <CardFour />
+      <CardFive />
       <Footer />
       <div>
         {/* <nav>

@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const StyledCard = styled.div`
   width: 370px;
   height: auto;
-  margin: 200px;
+  margin-left: 200px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -19,8 +19,8 @@ export const StyledImage = styled.img`
 export const StyledTitle = styled.div`
   width: 90%;
   height: auto;
+  padding: 10px 0;
   font-size: 20px;
-  padding-bottom: 10px;
   font-family: "Proba Pro Medium";
   border-bottom: 1px solid lightgray;
 `;
@@ -48,7 +48,7 @@ export const StyledRating = styled.div`
   margin-bottom: 10px;
 `;
 
-export const StyledHeartIcon = styled.img`
+export const StyledStarIcon = styled.img`
   margin: 2px;
 `;
 
@@ -83,43 +83,4 @@ export const StyledBanner = styled.div`
   color: white;
   background-color: #FFA822;
   text-align: center;
-`;
-
-export const StyledLocals = styled.div`
-  position: relative;
-  top: -25px;
-  left: -65px;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-`;
-
-export const StyledAvatarFirstImage = styled.img`
-  position: relative;
-  z-index: 2;
-  border-radius: 50px;
-  border: 2px solid white;
-  margin-left: -15px;
-`;
-
-export const StyledAvatarSecondImage = styled.img`
-  position: relative;
-  z-index: 1;
-  border-radius: 50px;
-  border: 2px solid white;
-  margin-left: -15px;
-`;
-
-export const StyledAvatarText = styled.div`
-  position: relative;
-  top: 5px;
-  left: -20px;
-  z-index: 0;
-  height: 20px;
-  font-family: "Proba Pro Medium";
-  font-size: 8px;
-  background-color: #fa006a;
-  color: white;
-  padding: 5px 10px 5px 25px;
-  border-radius: 15px;
 `;
