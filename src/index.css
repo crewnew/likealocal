@@ -13,6 +13,13 @@
 }
 
 @font-face {
+  font-family: "Proba Pro Medium";
+  src: local("Proba Pro"),
+    url("./fonts/Proba Pro/ProbaPro-Medium.otf") format("truetype");
+  /* font-weight: bold; */
+}
+
+@font-face {
   font-family: "The Secret";
   src: local("The Secret"),
     url("./fonts/The Secret/TheSecret-Regular.ttf") format("truetype");

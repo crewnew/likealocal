@@ -47,12 +47,13 @@ export const StyledSocialMediaItem= styled(Link)`
   color: black;
   font-family: "Proxima Nova";
   text-decoration: none;
+  display: flex;
+  align-items: center;
 `;
 
 export const StyledSocialMediaIcon = styled.img`
   width: 20px;
   margin-right:5px;
-  margin-top: 20px;
 `;
 
 

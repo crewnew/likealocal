@@ -6,6 +6,7 @@ import CategoryCover from "./components/CategoryCover/CategoryCover";
 import SocialMedia from "./components/SocialMedia/SocialMedia";
 import Paragraph from "./components/Paragraph/Paragraph";
 import Footer from "./components/Footer/Footer";
+import CardOne from "./components/CardOne/CardOne";
 
 export default function App() {
   return (
@@ -15,6 +16,7 @@ export default function App() {
       <CategoryCover />
       <Submenu />
       <Paragraph />
+      <CardOne />
       <Footer />
       <div>
         {/* <nav>
