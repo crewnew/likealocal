@@ -31,7 +31,11 @@ export default function App() {
 }
 
 function Home() {
-  return <h2></h2>;
+  return (
+    <div>
+      <Link to="/category">Category</Link>
+    </div>
+  );
 }
 
 function Product() {
