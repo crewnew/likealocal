@@ -4,6 +4,10 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+import './fonts/Proba Pro/ProbaProBold.ttf';
+import './fonts/Proxima Nova.otf';
+import './fonts/The Secret/TheSecret-Regular.ttf';
+
 ReactDOM.render(
   <React.StrictMode>
     <App />

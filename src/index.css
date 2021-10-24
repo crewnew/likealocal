@@ -1,3 +1,25 @@
+@font-face {
+  font-family: "Proxima Nova";
+  src: local("Proxima Nova"),
+    url("./fonts/Proxima Nova.otf") format("truetype");
+  /* font-weight: bold; */
+}
+
+@font-face {
+  font-family: "Proba Pro";
+  src: local("Proba Pro"),
+    url("./fonts/Proba Pro/ProbaProBold.ttf") format("truetype");
+  /* font-weight: bold; */
+}
+
+@font-face {
+  font-family: "The Secret";
+  src: local("The Secret"),
+    url("./fonts/The Secret/TheSecret-Regular.ttf") format("truetype");
+  /* font-weight: bold; */
+}
+
+
 * {
   margin: 0;
   box-sizing: border-box;

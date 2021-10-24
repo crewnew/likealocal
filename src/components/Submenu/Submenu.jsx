@@ -28,7 +28,7 @@ export default function Navbar({ children}) {
           </StyledMenuItem>
           <StyledMenuItem to="#">
             <StyledIcon src={ToursActivities}/>
-            <StyledLink>TOURS&#038;ACTIVITIES</StyledLink>
+            <StyledLink>TOURS &#038; ACTIVITIES</StyledLink>
           </StyledMenuItem>
           <StyledMenuItem to="#">
           <StyledIcon src={Eating}/>

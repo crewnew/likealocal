@@ -33,6 +33,7 @@ export const StyledLoginLink = styled(Link)`
     text-decoration: none;
     color: white;
     font-weight: 700;
+    font-size: 12px;
     display: flex;
     align-items: center;
 `;
@@ -43,6 +44,7 @@ export const StyledJoinLink = styled(Link)`
     height: 40px;
     color: #FEC94C;
     font-weight: 700;
+    font-size: 12px;
     text-decoration: none;
     display: flex;
     align-items: center

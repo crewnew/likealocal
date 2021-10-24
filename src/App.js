@@ -2,14 +2,22 @@ import "./App.css";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import Navbar from "./components/Navbar/Navbar";
 import Submenu from "./components/Submenu/Submenu";
+import CategoryCover from "./components/CategoryCover/CategoryCover";
+import SocialMedia from "./components/SocialMedia/SocialMedia";
+import Paragraph from "./components/Paragraph/Paragraph";
+import Footer from "./components/Footer/Footer";
 
 export default function App() {
   return (
     <Router>
       <Navbar />
+      <SocialMedia />
+      <CategoryCover />
       <Submenu />
+      <Paragraph />
+      <Footer />
       <div>
-        <nav>
+        {/* <nav>
           <ul>
             <li>
               <Link to="/">Home</Link>
@@ -24,7 +32,7 @@ export default function App() {
               <Link to="/search">Search</Link>
             </li>
           </ul>
-        </nav>
+        </nav> */}
 
         <Switch>
           <Route path="/search">
@@ -46,7 +54,7 @@ export default function App() {
 }
 
 function Home() {
-  return <h2>Home</h2>;
+  return <h2></h2>;
 }
 
 function Category() {

@@ -1,14 +1,10 @@
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 
-import { ReactComponent as Logo } from "../../assets/logo.svg";
-import { ReactComponent as Location } from "../../assets/location.svg";
-import { ReactComponent as Magnifier } from "../../assets/magnifier.svg";
-
 export const StyledMenu = styled.div`
   height: 45px;
   background-color: #f5f5f5;
-  padding: 0 110px;
+  padding: 0 120px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -22,17 +18,16 @@ export const StyledMenuItems = styled.div`
 `;
 
 export const StyledMenuItem = styled.div`
-  width: 15%;
+  width: 12%;
   height: 100%;
-  padding: 5px;
   display: flex;
   align-items: center;
   justify-content: center;
   margin-right: 10px;
 
   &:first-of-type {
-    border-right: 1px solid black;
-    height: 20px;
+    border-right: 1px solid #40404030;
+    height: 12px;
   }
 `;
 
@@ -42,15 +37,17 @@ export const StyledIcon = styled.img`
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 5px;
+  margin-right: 5px;
 `;
 
 export const StyledLink = styled(Link)`
-  font-size: 12px;
+  font-family: 'Proba Pro';
+  font-size: 11px;
+  font-weight: 900;
   text-decoration: none;
-  color: black;
+  color: #404040;
 
-  &:first-child{
+  &:first-child {
     color: red;
     text-decoration: underline;
   }
