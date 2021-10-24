@@ -58,19 +58,36 @@ export default () => {
         </Slider>
       </StyledSlider>
 
-      {/* <CardOne /> */}
-      <CardTwo />
-      <CardThree />
-      <CardFour />
-      <CardFive />
-      <SideMenu />
+      <StyledSlider>
+        <h2>Recommended tours in Madrid</h2>
+        <Slider {...settings} style={{ width: "100%" }}>
+          <CardTwo />
+          <CardTwo />
+          <CardTwo />
+          <CardTwo />
+          <CardTwo />
+        </Slider>
+      </StyledSlider>
+
+      <StyledCategories>
+        <StyledSideMenu>
+          <SideMenu></SideMenu>
+        </StyledSideMenu>
+        <StyledCards>
+          <CardThree />
+          <CardThree />
+          <CardThree />
+          <CardThree />
+          <CardThree />
+        </StyledCards>
+      </StyledCategories>
       <Footer />
     </div>
   );
 };
 
 const StyledSlider = styled.div`
-  height: 450px;
+  height: 470px;
   margin-top: 40px;
   width: 90%;
   margin-left: 5%;
@@ -78,4 +95,22 @@ const StyledSlider = styled.div`
   h2 {
     margin-left: 20px;
   }
+`;
+
+const StyledCategories = styled.div`
+  display: flex;
+  flex-direction: row;
+  margin-top: 100px;
+  padding: 0 120px;
+`;
+
+const StyledSideMenu = styled.div`
+  /* margin-top: -180px; */
+  width: 20%;
+`;
+
+const StyledCards = styled.div`
+  display: flex;
+  flex-direction: column;
+  width: 80%;
 `;

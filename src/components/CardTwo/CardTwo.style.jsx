@@ -3,11 +3,11 @@ import styled from "styled-components";
 export const StyledCard = styled.div`
   width: 370px;
   height: auto;
-  margin-left: 200px;
+  margin: 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  box-shadow: 5px 5px 5px #888888;
+  box-shadow: 2px 2px 15px #888888;
   position: relative;
 `;
 

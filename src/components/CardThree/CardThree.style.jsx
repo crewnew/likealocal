@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 export const StyledCard = styled.div`
   width: 940px;
   height: auto;
-  margin: 200px;
+  margin: 10px;
   display: flex;
   flex-direction: row;
   align-items: center;

@@ -1,4 +1,12 @@
-import { StyledMenu, StyledMenuItem, StyledLastMenuItem, StyledPriceRange } from "./SideMenu.style";
+import {
+  StyledMenu,
+  StyledMenuItem,
+  StyledLastMenuItem,
+  StyledPriceRange,
+  StyledLabel,
+  StyledInput,
+  StyledCheckboxes
+} from "./SideMenu.style";
 
 export default function SideMenu() {
   return (
@@ -14,10 +22,30 @@ export default function SideMenu() {
       <StyledMenuItem>Alternative Tours</StyledMenuItem>
       <StyledMenuItem>Running Tours</StyledMenuItem>
       <StyledLastMenuItem>
-      <StyledMenuItem>Workshops</StyledMenuItem>
-      <StyledPriceRange>
-          PRICE RANGE
-      </StyledPriceRange>
+        <StyledMenuItem>Workshops</StyledMenuItem>
+        <StyledPriceRange>PRICE RANGE</StyledPriceRange>
+        <StyledCheckboxes>
+          <StyledLabel>
+            <StyledInput type="checkbox" />
+            €0 - €49
+          </StyledLabel>
+          <StyledLabel>
+            <StyledInput type="checkbox" />
+            €50 - €99
+          </StyledLabel>
+          <StyledLabel>
+            <StyledInput type="checkbox" />
+            €100 - €149
+          </StyledLabel>
+          <StyledLabel>
+            <StyledInput type="checkbox" />
+            €150 - €199
+          </StyledLabel>
+          <StyledLabel>
+            <StyledInput type="checkbox" />
+            €200+
+          </StyledLabel>
+        </StyledCheckboxes>
       </StyledLastMenuItem>
     </StyledMenu>
   );

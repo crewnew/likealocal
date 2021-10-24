@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { Link } from "react-router-dom";
 
 export const StyledMenu = styled.div`
-  height: 45px;
+  height: 57px;
   background-color: #f5f5f5;
   padding: 0 120px;
   display: flex;
@@ -18,12 +18,11 @@ export const StyledMenuItems = styled.div`
 `;
 
 export const StyledMenuItem = styled.div`
-  width: 12%;
   height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-right: 10px;
+  margin-right: 30px;
 
   &:first-of-type {
     border-right: 1px solid #40404030;
@@ -32,7 +31,7 @@ export const StyledMenuItem = styled.div`
 `;
 
 export const StyledIcon = styled.img`
-  width: 15%;
+  width: 20%;
   height: auto;
   display: flex;
   align-items: center;
@@ -42,10 +41,11 @@ export const StyledIcon = styled.img`
 
 export const StyledLink = styled(Link)`
   font-family: 'Proba Pro';
-  font-size: 11px;
+  font-size: 16px;
   font-weight: 900;
   text-decoration: none;
   color: #404040;
+  white-space: nowrap;
 
   &:first-child {
     color: red;

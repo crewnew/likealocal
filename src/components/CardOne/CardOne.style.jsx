@@ -7,7 +7,7 @@ export const StyledCard = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  box-shadow: 5px 5px 5px #888888;
+  box-shadow: 2px 2px 15px #888888;
   position: relative;
 `;
 

@@ -1,7 +1,6 @@
 import styled from "styled-components";
 
 export const StyledParagraph = styled.div`
-  border: 1px solid green;
   position: relative;
   margin-top: 100px;
   left: 30%;
