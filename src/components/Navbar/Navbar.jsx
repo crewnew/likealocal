@@ -1,3 +1,4 @@
+import { connect } from "react-redux";
 import Input from "../common/Input/Input";
 import {
   StyledNavbar,
@@ -12,7 +13,11 @@ import { ReactComponent as Logo } from "../../assets/logo.svg";
 import { ReactComponent as Location } from "../../assets/location.svg";
 import { ReactComponent as Magnifier } from "../../assets/magnifier.svg";
 
-export default function Navbar() {
+function Navbar({ change, reset }) {
+  const handleChange = (e) => {
+    change(e.target.value);
+  };
+
   return (
     <StyledNavbar>
       <StyledLeftSide>
@@ -23,10 +28,9 @@ export default function Navbar() {
         <Input placeholder="Location">
           <Location />
         </Input>
-        <Input placeholder="What are you looking for?">
+        <Input placeholder="What are you looking for?" onChange={handleChange}>
           <Magnifier />
         </Input>
-    
       </StyledLeftSide>
       <StyledRightSide>
         <StyledLoginLink to="/login">LOG IN</StyledLoginLink>
@@ -35,3 +39,11 @@ export default function Navbar() {
     </StyledNavbar>
   );
 }
+
+const mapDispatchToProps = (dispatch) => {
+  return {
+    change: (value) => dispatch({ type: "CHANGE", payload: value }),
+    reset: () => dispatch({ type: "RESET" }),
+  };
+};
+export default connect(null, mapDispatchToProps)(Navbar);
