@@ -2,19 +2,19 @@ import styled from "styled-components";
 import { Link } from "react-router-dom";
 
 export const StyledCard = styled.div`
-  width: 940px;
-  height: auto;
-  margin: 10px;
+  width: 920px;
+  height: 230px;
   display: flex;
   flex-direction: row;
   align-items: center;
-  box-shadow: 5px 5px 5px #888888;
+  box-shadow: 2px 2px 15px #888888;
   position: relative;
 `;
 
 export const StyledImage = styled.img`
-  width: 325px;
-  height: 230px;
+  width: 35%;
+  height: 100%;
+  object-fit: cover;
 `;
 
 export const StyledTitle = styled.div`
@@ -25,8 +25,13 @@ export const StyledTitle = styled.div`
   font-family: "Proba Pro Medium";
 `;
 
+export const StyledRightSide = styled.div`
+  width: 65%;
+  display: flex;
+`;
+
 export const StyledBody = styled.div`
-  width: 450px;
+  width: 70%;
   height: auto;
   padding: 0 30px;
   display: flex;
