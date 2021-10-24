@@ -1,6 +1,9 @@
 import "./App.css";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import Category from "./pages/Category/Category";
+import Navbar from "./components/Navbar/Navbar";
+import Submenu from "./components/Submenu/Submenu";
+import Search from "./pages/Search/Search";
 
 export default function App() {
   return (
@@ -31,8 +34,4 @@ function Home() {
 
 function Product() {
   return <h2>Product</h2>;
-}
-
-function Search() {
-  return <h2>Search</h2>;
 }
