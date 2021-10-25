@@ -25,6 +25,7 @@ export const StyledRightSide = styled.div`
 
 export const StyledLogo = styled.div`
   margin-right: 50px;
+  cursor: pointer;
 `;
 
 export const StyledLoginLink = styled(Link)`

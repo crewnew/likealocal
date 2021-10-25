@@ -38,7 +38,6 @@ export default () => {
   return (
     <div>
       <SocialMedia />
-      <Submenu />
       <ProductCover />
       <LocalsCard />
       <StyledSlider>

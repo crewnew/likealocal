@@ -4,38 +4,30 @@ import Category from "./pages/Category/Category";
 import Navbar from "./components/Navbar/Navbar";
 import Submenu from "./components/Submenu/Submenu";
 import Search from "./pages/Search/Search";
+import Home from "./pages/Home";
 import Product from "./pages/Product/Product";
 
 export default function App() {
   return (
     <Router>
       <Navbar />
+      <Submenu />
       <div>
         <Switch>
-          <Route path="/search">
+          <Route path="/search" exact>
             <Search />
           </Route>
-          <Route path="/category">
+          <Route path="/:slug" exact>
             <Category />
           </Route>
-          <Route path="/product">
+          <Route path="/:city/:slug" exact>
             <Product />
           </Route>
-          <Route path="/">
+          <Route path="/" exact>
             <Home />
           </Route>
         </Switch>
       </div>
     </Router>
-  );
-}
-
-function Home() {
-  return (
-    <div>
-      <Link to="/category">Category</Link>
-      <Link to="/search">Search</Link>
-      <Link to="/product">Product</Link>
-    </div>
   );
 }

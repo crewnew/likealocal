@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { Link } from "react-router-dom";
 
 export const StyledMenu = styled.div`
-  width: 230px;
+  width: 290px;
   height: auto;
   display: flex;
   flex-direction: column;

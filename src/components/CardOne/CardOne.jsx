@@ -6,7 +6,7 @@ import {
   StyledBodyLeft,
   StyledBodyRight,
   StyledRating,
-  StyledReviews, 
+  StyledReviews,
   StyledHeartIcon,
   StyledPrice,
   StyledText,
@@ -14,43 +14,45 @@ import {
   StyledLocals,
   StyledAvatarFirstImage,
   StyledAvatarSecondImage,
-  StyledAvatarText
+  StyledAvatarText,
 } from "./CardOne.style";
 
 import CardImage from "../../assets/card-one-image.png";
-import HeartIcon from '../../assets/heart-icon.png';
-import Banner from '../../assets/with-locals.png';
-import Avatar from '../../assets/avatar.png';
+import HeartIcon from "../../assets/heart-icon.png";
+import Banner from "../../assets/with-locals.png";
+import Avatar from "../../assets/avatar.png";
 
-export default function CardOne() {
+export default function CardOne({ title, visit_reason, titleClick }) {
   return (
     <StyledCard>
       <StyledBanner src={Banner} />
       <StyledImage src={CardImage} />
       <StyledLocals>
-          <StyledAvatarFirstImage src={Avatar}/>
-          <StyledAvatarSecondImage src={Avatar}/>
-          <StyledAvatarText>Choose your favorite local!</StyledAvatarText>
+        <StyledAvatarFirstImage src={Avatar} />
+        <StyledAvatarSecondImage src={Avatar} />
+        <StyledAvatarText>Choose your favorite local!</StyledAvatarText>
       </StyledLocals>
-      <StyledTitle>
-        Alternative bike tour: the best of street art in Madrid
+      <StyledTitle onClick={titleClick}>
+        {visit_reason
+          ? visit_reason.substring(0, 80) + "..."
+          : title
+          ? title
+          : "Alternative bike tour: the best of street art in Madrid"}
       </StyledTitle>
       <StyledBody>
         <StyledBodyLeft>
-            <StyledRating>
-                <StyledHeartIcon src={HeartIcon}/>
-                <StyledHeartIcon src={HeartIcon}/>
-                <StyledHeartIcon src={HeartIcon}/>
-                <StyledHeartIcon src={HeartIcon}/>
-                <StyledHeartIcon src={HeartIcon}/>
-            </StyledRating>
-            <StyledReviews>
-                230 Reviews
-            </StyledReviews>
+          <StyledRating>
+            <StyledHeartIcon src={HeartIcon} />
+            <StyledHeartIcon src={HeartIcon} />
+            <StyledHeartIcon src={HeartIcon} />
+            <StyledHeartIcon src={HeartIcon} />
+            <StyledHeartIcon src={HeartIcon} />
+          </StyledRating>
+          <StyledReviews>230 Reviews</StyledReviews>
         </StyledBodyLeft>
         <StyledBodyRight>
-            <StyledPrice>15 EUR</StyledPrice>
-            <StyledText>per person</StyledText>
+          <StyledPrice>15 EUR</StyledPrice>
+          <StyledText>per person</StyledText>
         </StyledBodyRight>
       </StyledBody>
     </StyledCard>

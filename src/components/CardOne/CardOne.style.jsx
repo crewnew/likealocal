@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const StyledCard = styled.div`
   width: 370px;
-  height: auto;
+  height: 400px;
   margin: 20px;
   display: flex;
   flex-direction: column;
@@ -17,6 +17,7 @@ export const StyledImage = styled.img`
 `;
 
 export const StyledTitle = styled.div`
+  cursor: pointer;
   width: 90%;
   height: auto;
   font-size: 20px;

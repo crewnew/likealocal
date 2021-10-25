@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const StyledCard = styled.div`
   width: 370px;
-  height: auto;
+  height: 380px;
   margin: 20px;
   display: flex;
   flex-direction: column;
@@ -17,6 +17,7 @@ export const StyledImage = styled.img`
 `;
 
 export const StyledTitle = styled.div`
+  cursor: pointer;
   width: 90%;
   height: auto;
   padding: 10px 0;
@@ -79,8 +80,8 @@ export const StyledBanner = styled.div`
   padding: 4px;
   border-radius: 2px;
   font-size: 12px;
-  font-family: 'Proba Pro';
+  font-family: "Proba Pro";
   color: white;
-  background-color: #FFA822;
+  background-color: #ffa822;
   text-align: center;
 `;

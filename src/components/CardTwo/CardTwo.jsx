@@ -16,13 +16,17 @@ import {
   import CardImage from "../../assets/card-two-image.png";
   import StarIcon from '../../assets/star.png';
   
-  export default function CardOne() {
+  export default function CardOne({ title, visit_reason, titleClick }) {
     return (
       <StyledCard>
         <StyledBanner>FEATURED</StyledBanner>
         <StyledImage src={CardImage} />
-        <StyledTitle>
-          Alternative bike tour: the best of street art in Madrid
+        <StyledTitle onClick={titleClick}>
+          {visit_reason
+            ? visit_reason.substring(0, 80) + "..."
+            : title
+            ? title
+            : "Alternative bike tour: the best of street art in Madrid"}
         </StyledTitle>
         <StyledBody>
           <StyledBodyLeft>

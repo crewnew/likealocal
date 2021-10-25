@@ -18,6 +18,7 @@ export const StyledImage = styled.img`
 `;
 
 export const StyledTitle = styled.div`
+  cursor: pointer;
   width: 90%;
   height: auto;
   font-size: 24px;

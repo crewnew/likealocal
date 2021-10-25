@@ -1,3 +1,4 @@
+import { withRouter } from 'react-router-dom';
 import { connect } from "react-redux";
 import Input from "../common/Input/Input";
 import {
@@ -13,22 +14,28 @@ import { ReactComponent as Logo } from "../../assets/logo.svg";
 import { ReactComponent as Location } from "../../assets/location.svg";
 import { ReactComponent as Magnifier } from "../../assets/magnifier.svg";
 
-function Navbar({ change, reset }) {
+function Navbar({ change, reset, history }) {
   const handleChange = (e) => {
     change(e.target.value);
   };
 
+  const handleKeyDown = (event) => {
+    if (event.key === 'Enter') {
+      history.push('/search')
+    }
+  }
+
   return (
     <StyledNavbar>
       <StyledLeftSide>
-        <StyledLogo>
+        <StyledLogo onClick={() => history.push('/')}>
           <Logo />
         </StyledLogo>
 
         <Input placeholder="Location">
           <Location />
         </Input>
-        <Input placeholder="What are you looking for?" onChange={handleChange}>
+        <Input placeholder="What are you looking for?" onChange={handleChange} onKeyDown={handleKeyDown}>
           <Magnifier />
         </Input>
       </StyledLeftSide>
@@ -46,4 +53,4 @@ const mapDispatchToProps = (dispatch) => {
     reset: () => dispatch({ type: "RESET" }),
   };
 };
-export default connect(null, mapDispatchToProps)(Navbar);
+export default withRouter(connect(null, mapDispatchToProps)(Navbar));
