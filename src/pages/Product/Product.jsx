@@ -101,7 +101,7 @@ const StyledSlider = styled.div`
 const StyledFirstGrid = styled.div`
   margin-top: 150px;
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat( auto-fit, minmax(250px, 1fr) );
   grid-gap: 20px;
   padding: 0px 100px;
 `;
@@ -109,7 +109,7 @@ const StyledFirstGrid = styled.div`
 const StyledSecondGrid = styled.div`
   margin-top: 150px;
   display: grid;
-  grid-template-columns: repeat(6, 1fr);
+  grid-template-columns: repeat( auto-fit, minmax(150px, 1fr) );
   grid-gap: 20px;
   padding: 0px 100px;
 `;
@@ -117,7 +117,7 @@ const StyledSecondGrid = styled.div`
 const StyledGrid = styled.div`
   margin-top: 20px;
   display: grid;
-  grid-template-columns: 1fr 2fr 1fr;
+  grid-template-columns: repeat( auto-fit, minmax(250px, 1fr) );
   grid-gap: 20px;
   padding: 0px 20px;
 `;

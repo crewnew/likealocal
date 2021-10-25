@@ -16,7 +16,7 @@ export const StyledHead = styled.div`
 `;
 
 export const StyledLine = styled.div`
-    border: 1px solid #000;
+    border: 1px solid lightgray;
     width: 100%;
     opacity: 0.5;
 `;
@@ -65,5 +65,8 @@ export const StyledReply = styled.div`
         height: 40px;
         width: 100%;
         margin-left: 10px;
+        background-color: #f0f0f0;
+        border: none;
+        padding-left: 20px;
     }
 `;

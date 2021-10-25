@@ -7,7 +7,8 @@ import {
   StyledComment,
   StyledReply
 } from "./Answer.style";
-import AvatarImg from "../../assets/avatar-red.png";
+import AvatarImg from "../../assets/answer-avatar.png";
+
 
 export default function Answer() {
   return (

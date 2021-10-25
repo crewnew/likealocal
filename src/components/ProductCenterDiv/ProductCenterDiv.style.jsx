@@ -7,8 +7,13 @@ export const StyledDiv = styled.div`
   p {
     margin-bottom: 20px;
     color: #535353;
-    font-family: "ProbaPro Medium";
+    font-family: "Proxima Nova";
     line-height: 20px;
+    text-align: justify;
+  }
+
+  h1 {
+    font-family: "Proba Pro";
   }
 `;
 
@@ -18,4 +23,5 @@ export const StyledSpecial = styled.div`
   width: 500px;
   padding-left: 20px;
   margin-top: 50px;
+  text-align: justify;
 `;
