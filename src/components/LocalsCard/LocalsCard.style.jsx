@@ -3,9 +3,9 @@ import styled from "styled-components";
 export const StyledCard = styled.div`
   display: flex;
   flex-direction: column;
-  position: relative;
-  top: 100px;
-  left: 50px;
+  /* position: relative; */
+  margin-top: 100px;
+  margin-left: 50px;
 `;
 
 export const StyledFirstCard = styled.div`

@@ -83,7 +83,7 @@ export default () => {
 
 const StyledSlider = styled.div`
   height: 470px;
-  margin-top: 200px;
+  margin-top: 100px;
   width: 90%;
   margin-left: 5%;
 
@@ -110,9 +110,9 @@ const StyledSecondGrid = styled.div`
 `;
 
 const StyledGrid = styled.div`
-  margin-top: 150px;
+  margin-top: 20px;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: 1fr 2fr 1fr;
   grid-gap: 20px;
-  padding: 0px 100px;
+  padding: 0px 20px;
 `;
