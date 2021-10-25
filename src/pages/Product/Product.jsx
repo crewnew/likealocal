@@ -1,7 +1,7 @@
+import { withRouter } from "react-router-dom";
 import styled from "styled-components";
 import Slider from "react-slick";
 
-import Submenu from "../../components/Submenu/Submenu";
 import ProductCover from "../../components/ProductCover/ProductCover";
 import Footer from "../../components/Footer/Footer";
 import SocialMedia from "../../components/SocialMedia/SocialMedia";
@@ -11,8 +11,10 @@ import CardFive from "../../components/CardFive/CardFive";
 import LocalsCard from "../../components/LocalsCard/LocalsCard";
 import GMaps from "../../components/GMaps/GMaps";
 import ProductCenterDiv from "../../components/ProductCenterDiv/ProductCenterDiv";
+import Question from "../../components/Question/Question";
+import Answer from "../../components/Answer/Answer";
 
-export default () => {
+function Product ({match}) {
   const settings = {
     infinite: true,
     speed: 500,
@@ -40,15 +42,16 @@ export default () => {
   return (
     <div>
       <SocialMedia />
-      <Submenu />
-      <ProductCover />
+      <ProductCover city={match.params.city}/>
       <StyledGrid>
         <LocalsCard />
         <ProductCenterDiv />
         <GMaps />
       </StyledGrid>
+      <Question />
+      <Answer />
       <StyledSlider>
-        <h2>🔥 Top 4 Tours &#038; Experiences in Madrid</h2>
+      <h2>🔥 Top 4 Tours &#038; Experiences in {match.params.city}</h2>
         <Slider {...settings} style={{ width: "100%" }}>
           <CardTwo />
           <CardTwo />
@@ -80,6 +83,8 @@ export default () => {
     </div>
   );
 };
+
+export default withRouter(Product);
 
 const StyledSlider = styled.div`
   height: 470px;

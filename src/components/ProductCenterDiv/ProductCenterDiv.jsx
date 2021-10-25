@@ -4,24 +4,20 @@ import Gallery from "react-grid-gallery";
 export default function ProductCenterDiv() {
   const IMAGES = [
     {
-      src: "https://www.likealocalguide.com/media/cache/cc/aa/ccaa365ffb0127a0890c8373070fad34.jpg",
+      src: "	https://www.likealocalguide.com//blog/wp-content/uploads/2014/05/rsz_notredameparis-1200x800.jpg",
       thumbnail:
-        "https://www.likealocalguide.com/media/cache/cc/aa/ccaa365ffb0127a0890c8373070fad34.jpg",
+        "	https://www.likealocalguide.com//blog/wp-content/uploads/2014/05/rsz_notredameparis-1200x800.jpg",
       thumbnailWidth: 400,
       thumbnailHeight: 174,
       isSelected: true,
       caption: "After Rain (Jeshu John - designerspics.com)",
     },
     {
-      src: "https://www.likealocalguide.com/media/cache/58/48/58485e34b6c255e2d293c368b604e5ed.jpg",
+      src: "	https://www.likealocalguide.com/blog/wp-content/uploads/2016/11/shutterstock_143327113-1047x800.jpg",
       thumbnail:
-        "https://www.likealocalguide.com/media/cache/58/48/58485e34b6c255e2d293c368b604e5ed.jpg",
+        "	https://www.likealocalguide.com/blog/wp-content/uploads/2016/11/shutterstock_143327113-1047x800.jpg",
       thumbnailWidth: 320,
       thumbnailHeight: 212,
-      tags: [
-        { value: "Ocean", title: "Ocean" },
-        { value: "People", title: "People" },
-      ],
       caption: "Boats (Jeshu John - designerspics.com)",
     },
 
@@ -40,9 +36,9 @@ export default function ProductCenterDiv() {
       thumbnailHeight: 212,
     },
     {
-      src: "https://www.likealocalguide.com/media/cache/58/48/58485e34b6c255e2d293c368b604e5ed.jpg",
+      src: "	https://www.likealocalguide.com/blog/wp-content/uploads/2016/11/paris_flea_market.jpg",
       thumbnail:
-        "https://www.likealocalguide.com/media/cache/58/48/58485e34b6c255e2d293c368b604e5ed.jpg",
+        "	https://www.likealocalguide.com/blog/wp-content/uploads/2016/11/paris_flea_market.jpg",
       thumbnailWidth: 320,
       thumbnailHeight: 212,
     },
@@ -63,14 +59,17 @@ export default function ProductCenterDiv() {
         <Gallery images={IMAGES} />
       </div>
 
-      <h1>Why you should visit it</h1>
-      <p>
-        The view from here is a can't miss when visiting Madrid. Enjoy
-        refreshments from the rooftop bar, and chill out in the big lounge style
-        couches. You will find good space to move around, which makes it easier
-        to find a perfect shot of the capital's skyline - with architectural
-        highlights like Palacio de Cibeles and the Metropolis building.
-      </p>
+      <div>
+        <p>&nbsp;</p>
+        <h1>Why you should visit it</h1>
+        <p>
+          The view from here is a can't miss when visiting Madrid. Enjoy
+          refreshments from the rooftop bar, and chill out in the big lounge style
+          couches. You will find good space to move around, which makes it easier
+          to find a perfect shot of the capital's skyline - with architectural
+          highlights like Palacio de Cibeles and the Metropolis building.
+        </p>
+      </div>
 
       <StyledSpecial>
         <h1>Special tip</h1>

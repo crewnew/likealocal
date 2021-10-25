@@ -7,6 +7,8 @@ export const StyledDiv = styled.div`
   p {
     margin-bottom: 20px;
     color: #535353;
+    font-family: "ProbaPro Medium";
+    line-height: 20px;
   }
 `;
 
