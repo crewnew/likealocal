@@ -9,6 +9,8 @@ import CardTwo from "../../components/CardTwo/CardTwo";
 import CardFour from "../../components/CardFour/CardFour";
 import CardFive from "../../components/CardFive/CardFive";
 import LocalsCard from "../../components/LocalsCard/LocalsCard";
+import GMaps from "../../components/GMaps/GMaps";
+import ProductCenterDiv from "../../components/ProductCenterDiv/ProductCenterDiv";
 
 export default () => {
   const settings = {
@@ -38,8 +40,13 @@ export default () => {
   return (
     <div>
       <SocialMedia />
+      <Submenu />
       <ProductCover />
-      <LocalsCard />
+      <StyledGrid>
+        <LocalsCard />
+        <ProductCenterDiv />
+        <GMaps />
+      </StyledGrid>
       <StyledSlider>
         <h2>🔥 Top 4 Tours &#038; Experiences in Madrid</h2>
         <Slider {...settings} style={{ width: "100%" }}>
@@ -98,6 +105,14 @@ const StyledSecondGrid = styled.div`
   margin-top: 150px;
   display: grid;
   grid-template-columns: repeat(6, 1fr);
+  grid-gap: 20px;
+  padding: 0px 100px;
+`;
+
+const StyledGrid = styled.div`
+  margin-top: 150px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
   grid-gap: 20px;
   padding: 0px 100px;
 `;

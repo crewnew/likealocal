@@ -14,7 +14,7 @@ import {
   StyledText
 } from "./LocalsCard.style";
 
-import LocalsImg from "../../assets/avatar.png";
+import LocalsImg from "../../assets/locals-avatar.jpg";
 
 export default function LocalsCard() {
   return (
