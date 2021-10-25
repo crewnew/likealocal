@@ -21,7 +21,7 @@ function Search(props) {
     <div>
       <StyledResults>
         <StyledTitle>
-          Search results for: {props.query.query} in Berlin
+          Search results for: {props.query.query} in {props.query.query}
         </StyledTitle>
         <h3>
           35 tips and 2 tours by <span style={{ color: "red" }}>13 locals</span>
