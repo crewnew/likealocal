@@ -29,14 +29,14 @@ export const StyledSaveButton = styled.div`
   cursor: pointer;
   color: white;
   padding: 20px 15px;
-  
-  &:hover{
-      background-color: red;
+
+  &:hover {
+    background-color: red;
   }
 `;
 
 export const StyledLoveButton = styled.div`
-  background-color: #CF0E0D;
+  background-color: #cf0e0d;
   width: 130px;
   font-size: 20px;
   font-family: "ProbaPro Medium";
@@ -46,8 +46,8 @@ export const StyledLoveButton = styled.div`
   color: white;
   padding: 20px 30px;
 
-  &:hover{
-      background-color: red;
+  &:hover {
+    background-color: red;
   }
 `;
 
@@ -56,7 +56,10 @@ export const StyledCenter = styled.div`
   flex-direction: column;
   position: absolute;
   top: 30%;
-  left: 35%;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
 `;
 
 export const StyledCoverQuote = styled.div`
@@ -65,6 +68,7 @@ export const StyledCoverQuote = styled.div`
   font-size: 48px;
   font-weight: 600;
   color: white;
+  text-align: center;
 `;
 
 export const StyledCoverSubquote = styled.div`
@@ -73,4 +77,5 @@ export const StyledCoverSubquote = styled.div`
   font-size: 24px;
   font-weight: 600;
   color: white;
+  text-align: center;s
 `;
