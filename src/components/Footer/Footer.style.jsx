@@ -2,8 +2,6 @@ import styled from "styled-components";
 import { Link } from "react-router-dom";
 
 export const StyledFooter = styled.div`
-  position: relative;
-  top: 200px;
   padding: 0 150px;
 `;
 

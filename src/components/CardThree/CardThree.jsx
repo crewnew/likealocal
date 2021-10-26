@@ -34,8 +34,6 @@ export default function CardThree({
   phone_number,
   titleClick,
 }) {
-  console.log("title", title);
-  console.log("insidee", description);
   return (
     <StyledCard>
       <StyledBanner>FEATURED</StyledBanner>
@@ -78,13 +76,13 @@ export default function CardThree({
 
         <StyledRight>
           <StyledTop>
-            <StyledHeartIcon src={HeartIcon} />
-            <StyledBooking>BOOKED BY 219 PEOPLE!</StyledBooking>
+            {/* <StyledHeartIcon src={HeartIcon} /> */}
+            {/* <StyledBooking>BOOKED BY 219 PEOPLE!</StyledBooking> */}
           </StyledTop>
           <StyledBottom>
             <StyledPrice>15 EUR</StyledPrice>
             <StyledText>per person</StyledText>
-            <StyledButton>Book now</StyledButton>
+            {/* <StyledButton>Book now</StyledButton> */}
           </StyledBottom>
         </StyledRight>
       </StyledRightSide>

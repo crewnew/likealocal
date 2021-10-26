@@ -2,9 +2,6 @@ import { withRouter } from "react-router-dom";
 import styled from "styled-components";
 import Slider from "react-slick";
 import {
-  ApolloClient,
-  InMemoryCache,
-  ApolloProvider,
   useQuery,
   gql,
 } from "@apollo/client";
@@ -51,10 +48,6 @@ function Category({ history, match }) {
     history.push(url);
   };
 
-  console.log("data", data);
-  console.log("error", error);
-  console.log("loading", loading);
-
   const settings = {
     infinite: true,
     speed: 500,
@@ -92,6 +85,7 @@ function Category({ history, match }) {
           {data?.places_place?.slice(0, 10).map((place, index) => {
             return (
               <CardOne
+                key={index}
                 title={place.name}
                 slug={place.slug}
                 visit_reason={place.visit_reason}
@@ -131,9 +125,6 @@ function Category({ history, match }) {
         <StyledCards>
           {data?.places_place?.slice(0, 50).map((place, index) => {
             if (!place.visit_reason && !place.short_description) return null;
-            console.log("place.name", place.name);
-            console.log("place.visit_reason", place.visit_reason);
-            console.log("place.short_description", place.short_description);
             return (
               <div style={{ marginBottom: "20px" }}>
                 <CardThree
@@ -156,7 +147,6 @@ function Category({ history, match }) {
           })}
         </StyledCards>
       </StyledCategories>
-      <Footer />
     </div>
   );
 }

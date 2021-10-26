@@ -1,7 +1,7 @@
 import { StyledDiv, StyledSpecial } from "./ProductCenterDiv.style";
 import Gallery from "react-grid-gallery";
 
-export default function ProductCenterDiv() {
+export default function ProductCenterDiv({ visit_reason, city }) {
   const IMAGES = [
     {
       src:
@@ -53,11 +53,13 @@ export default function ProductCenterDiv() {
     <StyledDiv>
       <h1>Why locals love it</h1>
       <p>
-        'Madrid al Cielo' - Madrid to heaven, is a popular proverb in the
+        {visit_reason
+          ? visit_reason
+          : `'${city} al Cielo' - Madrid to heaven, is a popular proverb in the
         Spanish captial, and on top of the art building Círculo de Bellas Artes
         in Madrid, locals can almost reach the sky. The rooftop terrace offers
         stunning views of downtown Madrid, and as far as the snowcovered
-        mountain peaks on the horizon.
+        mountain peaks on the horizon.`}
       </p>
 
       <div>

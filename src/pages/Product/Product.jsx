@@ -14,12 +14,31 @@ import ProductCenterDiv from "../../components/ProductCenterDiv/ProductCenterDiv
 import Question from "../../components/Question/Question";
 import Answer from "../../components/Answer/Answer";
 import { useEffect } from "react";
+import { useQuery,gql } from "@apollo/client";
 
 function Product({ match }) {
+  const PLACES_QUERY = gql`
+  query MyQuery {
+    places_place(filter: {slug: {_eq: "${match.params.slug}"}}) {
+      name
+      short_description
+      slug
+      visit_reason
+      id
+      city_id {
+        id
+        name
+        slug
+      }
+    }
+  }
+  `;
+  const { loading, error, data } = useQuery(PLACES_QUERY);
+
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
-  
+
   const settings = {
     infinite: true,
     speed: 500,
@@ -47,10 +66,14 @@ function Product({ match }) {
   return (
     <div>
       <SocialMedia />
-      <ProductCover city={match.params.city} />
+      <ProductCover
+        city={match.params.city}
+        name={data?.places_place[0]?.name}
+        short_description={data?.places_place[0]?.short_description}
+      />
       <StyledGrid>
         <LocalsCard />
-        <ProductCenterDiv />
+        <ProductCenterDiv visit_reason={data?.places_place[0]?.visit_reason} city={match.params.city} />
         <GMaps />
       </StyledGrid>
       <Question />
@@ -83,8 +106,6 @@ function Product({ match }) {
         <CardFive />
         <CardFive />
       </StyledSecondGrid>
-
-      <Footer />
     </div>
   );
 }

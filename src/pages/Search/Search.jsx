@@ -13,6 +13,7 @@ import {
   Snippet,
 } from "react-instantsearch-dom";
 import CardThree from "../../components/CardThree/CardThree";
+import { withRouter } from "react-router-dom";
 
 const searchClient = instantMeiliSearch("http://164.90.235.228/", "");
 
@@ -20,9 +21,7 @@ function Search(props) {
   return (
     <div>
       <StyledResults>
-        <StyledTitle>
-          Search results for: {props.query.query}
-        </StyledTitle>
+  <StyledTitle>Search results for: {props.query.query} {props.query.location && props.query.location !== 'search' ? `in ${props.query.location}` : ''}</StyledTitle>
         <h3>
           35 tips and 2 tours by <span style={{ color: "red" }}>13 locals</span>
         </h3>
@@ -61,7 +60,10 @@ function Search(props) {
 }
 
 function Hit(props) {
-  console.log("props hit", props);
+  const handleRedirect = (id) => {
+    // history.push(`/${}/${id}`)
+  };
+
   return (
     <div
       style={{
@@ -73,6 +75,7 @@ function Hit(props) {
       }}
     >
       <CardThree
+        titleClick={() => handleRedirect(props.hit.id)}
         title={props.hit.name}
         author={props.hit.author_name}
         description={props.hit.short_description}
@@ -91,7 +94,7 @@ const mapStateToProps = (state) => {
   };
 };
 
-export default connect(mapStateToProps)(Search);
+export default withRouter(connect(mapStateToProps)(Search));
 
 const StyledResults = styled.div`
   height: 200px;
