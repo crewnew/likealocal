@@ -26,7 +26,10 @@ const StyledCover = styled.img`
 const StyledBox = styled.div`
   position: absolute;
   top: 65px;
-  left: 25%;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
   width: 50%;
   height: 350px;
   background-color: #eeecef;
