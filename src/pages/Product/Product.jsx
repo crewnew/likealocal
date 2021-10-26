@@ -13,8 +13,13 @@ import GMaps from "../../components/GMaps/GMaps";
 import ProductCenterDiv from "../../components/ProductCenterDiv/ProductCenterDiv";
 import Question from "../../components/Question/Question";
 import Answer from "../../components/Answer/Answer";
+import { useEffect } from "react";
 
-function Product ({match}) {
+function Product({ match }) {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+  
   const settings = {
     infinite: true,
     speed: 500,
@@ -42,7 +47,7 @@ function Product ({match}) {
   return (
     <div>
       <SocialMedia />
-      <ProductCover city={match.params.city}/>
+      <ProductCover city={match.params.city} />
       <StyledGrid>
         <LocalsCard />
         <ProductCenterDiv />
@@ -51,7 +56,7 @@ function Product ({match}) {
       <Question />
       <Answer />
       <StyledSlider>
-      <h2>🔥 Top 4 Tours &#038; Experiences in {match.params.city}</h2>
+        <h2>🔥 Top 4 Tours &#038; Experiences in {match.params.city}</h2>
         <Slider {...settings} style={{ width: "100%" }}>
           <CardTwo />
           <CardTwo />
@@ -82,7 +87,7 @@ function Product ({match}) {
       <Footer />
     </div>
   );
-};
+}
 
 export default withRouter(Product);
 
@@ -101,7 +106,7 @@ const StyledSlider = styled.div`
 const StyledFirstGrid = styled.div`
   margin-top: 150px;
   display: grid;
-  grid-template-columns: repeat( auto-fit, minmax(250px, 1fr) );
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   grid-gap: 20px;
   padding: 0px 100px;
 `;
@@ -109,7 +114,7 @@ const StyledFirstGrid = styled.div`
 const StyledSecondGrid = styled.div`
   margin-top: 150px;
   display: grid;
-  grid-template-columns: repeat( auto-fit, minmax(150px, 1fr) );
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
   grid-gap: 20px;
   padding: 0px 100px;
 `;
@@ -117,7 +122,7 @@ const StyledSecondGrid = styled.div`
 const StyledGrid = styled.div`
   margin-top: 20px;
   display: grid;
-  grid-template-columns: repeat( auto-fit, minmax(250px, 1fr) );
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   grid-gap: 20px;
   padding: 0px 20px;
 `;

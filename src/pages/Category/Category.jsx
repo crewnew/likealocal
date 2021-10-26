@@ -18,8 +18,12 @@ import CardOne from "../../components/CardOne/CardOne";
 import CardTwo from "../../components/CardTwo/CardTwo";
 import CardThree from "../../components/CardThree/CardThree";
 import SideMenu from "../../components/SideMenu/SideMenu";
+import { useEffect } from "react";
 
 function Category({ history, match }) {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   const PLACES_QUERY = gql`
     query PlacesQuery {
       places_place(filter: {city_id: {slug: {_contains: "${match.params.slug}"}}}) {
@@ -78,7 +82,7 @@ function Category({ history, match }) {
   return (
     <div>
       <SocialMedia />
-      <CategoryCover city={match.params.slug}/>
+      <CategoryCover city={match.params.slug} />
       <Submenu />
       <Paragraph city={match.params.slug} />
 
@@ -126,16 +130,20 @@ function Category({ history, match }) {
         </StyledSideMenu>
         <StyledCards>
           {data?.places_place?.slice(0, 50).map((place, index) => {
-            if(!place.visit_reason && !place.short_description) return null;
-            console.log('place.name', place.name)
-            console.log('place.visit_reason', place.visit_reason)
-            console.log('place.short_description', place.short_description)
+            if (!place.visit_reason && !place.short_description) return null;
+            console.log("place.name", place.name);
+            console.log("place.visit_reason", place.visit_reason);
+            console.log("place.short_description", place.short_description);
             return (
-              <div style={{ marginBottom: '20px'}}>
+              <div style={{ marginBottom: "20px" }}>
                 <CardThree
                   title={place.name}
                   slug={place.slug}
-                  reason={place.visit_reason ? place.visit_reason : place.short_description}
+                  reason={
+                    place.visit_reason
+                      ? place.visit_reason
+                      : place.short_description
+                  }
                   address={place.address}
                   phone_number={place.phone_number}
                   {...place}
