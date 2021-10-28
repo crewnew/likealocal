@@ -41,6 +41,6 @@ const StyledParagraph = styled.div`
   justify-content: center;
   padding-top: 150px;
   font-family: "Proba Pro";
-  font-size: 30px;
+  font-size: 2vw;
   color: #404040;
 `;
