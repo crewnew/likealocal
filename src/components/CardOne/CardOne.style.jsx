@@ -37,7 +37,7 @@ export const StyledBody = styled.div`
   margin-bottom: 20px;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;\
+  justify-content: space-between;
 `;
 
 export const StyledBodyLeft = styled.div`

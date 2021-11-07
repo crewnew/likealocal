@@ -153,7 +153,6 @@ function Category({ history, match }) {
 export default withRouter(Category);
 
 const StyledSlider = styled.div`
-  height: 470px;
   margin-top: 40px;
   width: 90%;
   margin-left: 5%;

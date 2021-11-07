@@ -193,6 +193,7 @@ export const StyledParagraph = styled.div`
   font-family: "Proxima Nova";
   color: #515151;
   line-height: 15px;
+  white-space: wrap;
 
   @media (max-width: 800px) {
     font-size: 0.7vw;
