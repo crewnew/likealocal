@@ -9,10 +9,15 @@ export const StyledCard = styled.div`
   align-items: center;
   box-shadow: 2px 2px 15px #888888;
   position: relative;
+
+  @media (max-width: 800px) {
+    width: 50%;
+    height: auto;
+  }
 `;
 
 export const StyledImage = styled.img`
-  width: 370px;
+  width: 100%;
   height: auto;
 `;
 
@@ -20,19 +25,19 @@ export const StyledTitle = styled.div`
   cursor: pointer;
   width: 90%;
   height: auto;
-  font-size: 20px;
+  font-size: 1.5vw;
   padding-bottom: 10px;
   font-family: "Proba Pro Medium";
   border-bottom: 1px solid lightgray;
 `;
 
 export const StyledBody = styled.div`
-  width: 370px;
+  width: 100%;
   height: auto;
   margin-bottom: 20px;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-between;\
 `;
 
 export const StyledBodyLeft = styled.div`
@@ -51,23 +56,24 @@ export const StyledRating = styled.div`
 
 export const StyledHeartIcon = styled.img`
   margin: 2px;
+  width: 5%;
 `;
 
 export const StyledReviews = styled.div`
   font-family: "Proxima Nova";
-  font-size: 12px;
+  font-size: 1vw;
   color: gray;
 `;
 
 export const StyledText = styled.div`
   font-family: "Proxima Nova";
-  font-size: 12px;
+  font-size: 1vw;
   color: gray;
 `;
 
 export const StyledPrice = styled.div`
   font-family: "Proba Pro";
-  font-size: 20px;
+  font-size: 1.5vw;
   color: black;
 `;
 
@@ -75,17 +81,15 @@ export const StyledBanner = styled.img`
   position: absolute;
   top: 10%;
   left: 0;
-  width: 130px;
-  height: 32px;
+  width: 40%;
+  height: 5%;
   border-top-right-radius: 2px;
   border-bottom-right-radius: 2px;
   object-fit: cover;
 `;
 
 export const StyledLocals = styled.div`
-  position: relative;
-  top: -25px;
-  left: -65px;
+  margin: -10% 0 10% 5%;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -97,6 +101,7 @@ export const StyledAvatarFirstImage = styled.img`
   border-radius: 50px;
   border: 2px solid white;
   margin-left: -15px;
+  width: 20%;
 `;
 
 export const StyledAvatarSecondImage = styled.img`
@@ -105,6 +110,7 @@ export const StyledAvatarSecondImage = styled.img`
   border-radius: 50px;
   border: 2px solid white;
   margin-left: -15px;
+  width: 20%;
 `;
 
 export const StyledAvatarText = styled.div`
@@ -114,7 +120,7 @@ export const StyledAvatarText = styled.div`
   z-index: 0;
   height: 20px;
   font-family: "Proba Pro Medium";
-  font-size: 8px;
+  font-size: 1vw;
   background-color: #fa006a;
   color: white;
   padding: 5px 10px 5px 25px;

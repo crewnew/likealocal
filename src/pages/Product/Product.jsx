@@ -54,7 +54,7 @@ function Product({ match }) {
         },
       },
       {
-        breakpoint: 850,
+        breakpoint: 950,
         settings: {
           slidesToShow: 1,
           centerMode: true,

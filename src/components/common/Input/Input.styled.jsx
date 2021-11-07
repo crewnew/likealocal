@@ -1,18 +1,23 @@
 import styled from "styled-components";
 
 export const StyledInputContainer = styled.div`
-  height: 40px;
-  width: 300px;
+  height: 50%;
+  width: auto;
   background-color: white;
   margin: 0 5px;
   display: flex;
+
+  @media (max-width: 900px) {
+   display: none;
+  }
 `;
 
 export const StyledInput = styled.input`
-  width: 100%;
+  width: auto;
   height: 100%;
-  padding-left: 10px;
+  padding: 0 20px;
   border: none;
+  font-size: 1vw;
 
   &:focus{
     outline: none;
@@ -22,6 +27,7 @@ export const StyledInput = styled.input`
 export const StyledIcon = styled.div`
   width: 12%;
   height: 100%;
+  padding: 0 5px;
   display: flex;
   align-items: center;
   justify-content: center;

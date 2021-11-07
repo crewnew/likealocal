@@ -1,10 +1,13 @@
 import styled from "styled-components";
 
 export const StyledParagraph = styled.div`
-  position: relative;
-  margin-top: 100px;
-  left: 30%;
-  width: 35%;
+  position:relative;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 5vh;
+  width: 50%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -13,12 +16,12 @@ export const StyledParagraph = styled.div`
 `;
 
 export const StyledTitle = styled.div`
-  font-size: 40px;
+  font-size: 3vw;
   font-family: "Proba Pro";
   margin-bottom: 20px;
 `;
 
 export const StyledBody = styled.div`
-  font-size: 20px;
+  font-size: 2vw;
   font-family: "Proxima Nova";
 `;

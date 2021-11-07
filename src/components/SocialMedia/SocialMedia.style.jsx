@@ -15,4 +15,8 @@ export const StyledIcon = styled.img`
   &:hover{
       cursor: pointer;
   }
+
+  @media (max-width: 768px) {
+    width: 20px;
+  }
 `;

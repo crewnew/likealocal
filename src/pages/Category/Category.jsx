@@ -59,7 +59,6 @@ function Category({ history, match }) {
         settings: {
           slidesToShow: 2,
           slidesToScroll: 1,
-          centerMode: true,
         },
       },
       {
@@ -76,7 +75,7 @@ function Category({ history, match }) {
     <div>
       <SocialMedia />
       <CategoryCover city={match.params.slug} />
-      <Submenu />
+      {/* <Submenu /> */}
       <Paragraph city={match.params.slug} />
 
       <StyledSlider>
@@ -161,6 +160,7 @@ const StyledSlider = styled.div`
 
   h2 {
     margin-left: 20px;
+    font-size: 2.5vw;
     font-family: "Proba Pro";
   }
 `;

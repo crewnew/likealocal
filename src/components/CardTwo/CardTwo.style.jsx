@@ -47,10 +47,18 @@ export const StyledRating = styled.div`
   display: flex;
   flex-direction: row;
   margin-bottom: 10px;
+
+  @media (max-width: 800px) {
+   margin-bottom: 0;
+  }
 `;
 
 export const StyledStarIcon = styled.img`
   margin: 2px;
+
+  @media (max-width: 800px) {
+   width: 2%;
+  }
 `;
 
 export const StyledReviews = styled.div`

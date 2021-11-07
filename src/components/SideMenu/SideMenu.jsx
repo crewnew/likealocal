@@ -21,8 +21,8 @@ export default function SideMenu() {
       <StyledMenuItem>Bike Tours</StyledMenuItem>
       <StyledMenuItem>Alternative Tours</StyledMenuItem>
       <StyledMenuItem>Running Tours</StyledMenuItem>
+      <StyledMenuItem>Workshops</StyledMenuItem>
       <StyledLastMenuItem>
-        <StyledMenuItem>Workshops</StyledMenuItem>
         <StyledPriceRange>PRICE RANGE</StyledPriceRange>
         <StyledCheckboxes>
           <StyledLabel>

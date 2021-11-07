@@ -41,10 +41,10 @@ export default function CardThree({
       <StyledRightSide>
         <StyledBody>
           <StyledHeader>
-            <StyledHeaderItem>TOUR &#183; | </StyledHeaderItem>
-            <StyledHeaderItem>ALTERNATIVE &#183; | </StyledHeaderItem>
+            <StyledHeaderItem>TOUR &nbsp;| </StyledHeaderItem>
+            <StyledHeaderItem>ALTERNATIVE &nbsp;| </StyledHeaderItem>
             <StyledHeaderItem>
-              {author ? author : phone_number} |{" "}
+              {author ? author : phone_number} &nbsp;|{" "}
             </StyledHeaderItem>
             <StyledHeaderItem>
               {address && address.substring(0, 20) + "..."}
@@ -75,10 +75,10 @@ export default function CardThree({
         </StyledBody>
 
         <StyledRight>
-          <StyledTop>
-            {/* <StyledHeartIcon src={HeartIcon} /> */}
-            {/* <StyledBooking>BOOKED BY 219 PEOPLE!</StyledBooking> */}
-          </StyledTop>
+          {/* <StyledTop>
+            <StyledHeartIcon src={HeartIcon} />
+            <StyledBooking>BOOKED BY 219 PEOPLE!</StyledBooking>
+          </StyledTop> */}
           <StyledBottom>
             <StyledPrice>15 EUR</StyledPrice>
             <StyledText>per person</StyledText>

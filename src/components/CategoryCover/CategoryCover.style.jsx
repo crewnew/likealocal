@@ -20,7 +20,7 @@ export const StyledLeftSide = styled.div`
 export const StyledCoverQuote = styled.div`
   width: 45%;
   font-family: 'Proba Pro';
-  font-size: 48px;
+  font-size: 3vw;
   font-weight: 600;
   color: white;
 `;
@@ -30,11 +30,12 @@ width: 20%;
 background-color: #EA3424;
 color: white;
 font-family: 'Proba Pro';
-font-size: 16px;
+font-size: 1vw;
 padding: 10px 5px;
 border: none;
 outline: none;
-margin-top: 20px;
+margin-top: 1vh;
+white-space: nowrap;
 
 &:hover{
   cursor: pointer;
