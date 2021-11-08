@@ -15,6 +15,16 @@ export const StyledDiv = styled.div`
   h1 {
     font-family: "Proba Pro";
   }
+
+  @media (max-width: 800px){
+    p{
+      font-size: 2vw;
+    }
+
+    h1 {
+    font-size: 3vw;
+  }
+  }
 `;
 
 

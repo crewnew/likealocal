@@ -39,8 +39,6 @@ export default function Answer() {
         </StyledReply>
         </StyledContent>
       </StyledComment>
-
-
       <StyledLine />
     </StyledAnswer>
   );

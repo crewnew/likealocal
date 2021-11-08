@@ -14,7 +14,7 @@ import ProductCenterDiv from "../../components/ProductCenterDiv/ProductCenterDiv
 import Question from "../../components/Question/Question";
 import Answer from "../../components/Answer/Answer";
 import { useEffect } from "react";
-import { useQuery,gql } from "@apollo/client";
+import { useQuery, gql } from "@apollo/client";
 
 function Product({ match }) {
   const PLACES_QUERY = gql`
@@ -73,7 +73,10 @@ function Product({ match }) {
       />
       <StyledGrid>
         <LocalsCard />
-        <ProductCenterDiv visit_reason={data?.places_place[0]?.visit_reason} city={match.params.city} />
+        <ProductCenterDiv
+          visit_reason={data?.places_place[0]?.visit_reason}
+          city={match.params.city}
+        />
         <GMaps />
       </StyledGrid>
       <Question />
@@ -120,6 +123,12 @@ const StyledSlider = styled.div`
   h2 {
     margin-left: 20px;
     font-family: "Proba Pro";
+  }
+
+  @media (max-width: 800px) {
+    h2 {
+      font-size: 3vw;
+    }
   }
 `;
 

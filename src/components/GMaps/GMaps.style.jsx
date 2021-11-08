@@ -12,6 +12,10 @@ export const StyledCard = styled.div`
 
 export const StyledText = styled.div`
   font-size: 12px;
+
+  @media (max-width: 800px){
+    font-size: 3vw;
+  }
 `;
 
 export const StyledIcon = styled.img`
