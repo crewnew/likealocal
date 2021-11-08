@@ -8,17 +8,25 @@ export const StyledCard = styled.div`
   align-items: center;
   box-shadow: 5px 5px 5px #888888;
   position: relative;
+
+  @media (max-width: 800px){
+    width: 100%;
+  }
 `;
 
 export const StyledImage = styled.img`
-  width: 300px;
-  height: 250px;
+  width: 100%;
+  height: auto;
 `;
 
 export const StyledTitle = styled.div`
   font-size: 20px;
   padding-bottom: 10px;
   font-family: "Proba Pro";
+
+  @media (max-width: 800px){
+    font-size: 2vw;
+  }
 `;
 
 export const StyledBody = styled.div`

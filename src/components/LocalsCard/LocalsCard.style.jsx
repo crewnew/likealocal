@@ -5,7 +5,7 @@ export const StyledCard = styled.div`
   flex-direction: column;
   /* position: relative; */
   margin-top: 100px;
-  margin-left: 50px;
+  margin-left: 30px;
 `;
 
 export const StyledFirstCard = styled.div`

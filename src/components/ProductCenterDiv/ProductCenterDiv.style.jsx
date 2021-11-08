@@ -24,4 +24,8 @@ export const StyledSpecial = styled.div`
   padding-left: 20px;
   margin-top: 50px;
   text-align: justify;
+
+  @media (max-width: 800px) {
+    width: 100%;
+  }
 `;

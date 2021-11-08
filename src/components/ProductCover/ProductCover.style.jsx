@@ -9,6 +9,10 @@ export const StyledCoverImage = styled.img`
   height: 70vh;
   object-fit: cover;
   filter: brightness(50%);
+
+  @media (max-width: 800px){
+    height: 40vh;
+  }
 `;
 
 export const StyledCoverButtons = styled.div`
@@ -33,6 +37,12 @@ export const StyledSaveButton = styled.div`
   &:hover {
     background-color: red;
   }
+
+  @media (max-width: 800px){
+    font-size: 2vw;
+    padding: 10px 10px;
+    width: auto;
+  }
 `;
 
 export const StyledLoveButton = styled.div`
@@ -48,6 +58,12 @@ export const StyledLoveButton = styled.div`
 
   &:hover {
     background-color: red;
+  }
+
+  @media (max-width: 800px){
+    font-size: 2vw;
+    padding: 10px 10px;
+    width: auto;
   }
 `;
 
@@ -69,6 +85,10 @@ export const StyledCoverQuote = styled.div`
   font-weight: 600;
   color: white;
   text-align: center;
+
+  @media (max-width: 800px){
+    font-size: 2vw;
+  }
 `;
 
 export const StyledCoverSubquote = styled.div`

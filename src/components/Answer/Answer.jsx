@@ -24,13 +24,13 @@ export default function Answer() {
           <div>
             <h5>Love the place!</h5>
             <div style={{ marginTop: '20px' }}>
-              <span style={{ color: 'red' }}>Alejandaro</span>
+              <span style={{ color: 'red', fontSize: '1vw'}}>Alejandaro</span>
               <span>&nbsp;&nbsp;·&nbsp;&nbsp;</span>
-              <span style={{ color: '#ababab' }}>Traveler</span>
+              <span style={{ color: '#ababab', fontSize: '1vw' }}>Traveler</span>
               <span>&nbsp;&nbsp;·&nbsp;&nbsp;</span>
-              <span style={{ color: '#ababab' }}>OCTOBER 8, 2021</span>
+              <span style={{ color: '#ababab', fontSize: '1vw'}}>OCTOBER 8, 2021</span>
               <span>&nbsp;&nbsp;·&nbsp;&nbsp;</span>
-              <span style={{ color: '#ababab' }}>Likes</span>
+              <span style={{ color: '#ababab', fontSize: '1vw' }}>Likes</span>
             </div>
           </div>
         <StyledReply>
@@ -45,3 +45,4 @@ export default function Answer() {
     </StyledAnswer>
   );
 }
+

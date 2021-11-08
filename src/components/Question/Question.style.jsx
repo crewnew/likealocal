@@ -1,6 +1,9 @@
 import styled from "styled-components";
 
-export const StyledImage = styled.img``;
+export const StyledImage = styled.img`
+@media (max-width: 800px){
+    width: 30%;
+  }`;
 
 export const StyledTitle = styled.div`
   font-size: 24px;
@@ -8,6 +11,10 @@ export const StyledTitle = styled.div`
   font-family: "Proba Pro";
   display: flex;
   align-items: center;
+
+  @media (max-width: 800px){
+    font-size: 3vw;
+  }
 `;
 
 export const StyledButton = styled.button`
@@ -17,6 +24,11 @@ export const StyledButton = styled.button`
   font-size: 15px;
   border: none;
   padding: 14px 28px;
+
+  @media (max-width: 800px){
+    font-size: 2vw;
+    padding: 5px 10px;
+  }
 `;
 
 export const StyledFirst = styled.div`
@@ -54,4 +66,11 @@ export const StyledInput = styled.input`
   border-radius: 4px;
   padding-left: 10px;
   border: 1px solid #d3d3d3;
+
+  @media (max-width: 800px){
+    width: 50%;
+    height: 20px;
+    font-size: 1vw;
+    margin-top: 10px;
+  }
 `;

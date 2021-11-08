@@ -30,6 +30,12 @@ export const StyledContent = styled.div`
         font-weight: 300;
         margin-top: 5px;
     }
+
+    @media (max-width: 800px){
+        h5{
+            font-size: 2vw;
+        }
+    }
 `;
 
 export const AvatarCircle = styled.div`
@@ -44,6 +50,10 @@ export const AvatarCircle = styled.div`
     align-items: center;
     font-family: Proba Pro;
     margin-right: 10px;
+
+    @media (max-width: 800px){
+       
+    }
 `;
 
 export const StyledComment = styled.div`
@@ -69,4 +79,14 @@ export const StyledReply = styled.div`
         border: none;
         padding-left: 20px;
     }
+
+    @media (max-width: 800px){
+        width: 80%;
+
+        input{
+            width: 80%;
+            font-size: 1vw;
+        }
+    }
 `;
+

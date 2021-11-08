@@ -113,7 +113,6 @@ function Product({ match }) {
 export default withRouter(Product);
 
 const StyledSlider = styled.div`
-  height: 470px;
   margin-top: 100px;
   width: 90%;
   margin-left: 5%;
@@ -128,8 +127,13 @@ const StyledFirstGrid = styled.div`
   margin-top: 150px;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  grid-gap: 20px;
+  grid-gap: 10px;
   padding: 0px 100px;
+
+  @media (max-width: 800px) {
+    margin-left: 40px;
+    grid-template-columns: repeat(2, 1fr);
+  }
 `;
 
 const StyledSecondGrid = styled.div`
@@ -138,6 +142,11 @@ const StyledSecondGrid = styled.div`
   grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
   grid-gap: 20px;
   padding: 0px 100px;
+
+  @media (max-width: 800px) {
+    margin-left: 40px;
+    grid-template-columns: repeat(2, 1fr);
+  }
 `;
 
 const StyledGrid = styled.div`
