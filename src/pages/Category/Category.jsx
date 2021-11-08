@@ -74,7 +74,7 @@ function Category({ history, match }) {
   return (
     <div>
       <SocialMedia />
-      <CategoryCover city={match.params.slug} />
+      <CategoryCover city={match.params.slug}/>
       {/* <Submenu /> */}
       <Paragraph city={match.params.slug} />
 

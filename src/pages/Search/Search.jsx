@@ -66,6 +66,7 @@ function Search(props) {
 
 function Hit(props) {
   const handleRedirect = (id) => {
+    console.log('props', props)
     // history.push(`/${}/${id}`)
   };
 
