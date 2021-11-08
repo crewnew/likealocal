@@ -21,7 +21,12 @@ function Search(props) {
   return (
     <div>
       <StyledResults>
-  <StyledTitle>Search results for: {props.query.query} {props.query.location && props.query.location !== 'search' ? `in ${props.query.location}` : ''}</StyledTitle>
+        <StyledTitle>
+          Search results for: {props.query.query}{" "}
+          {props.query.location && props.query.location !== "search"
+            ? `in ${props.query.location}`
+            : ""}
+        </StyledTitle>
         <h3>
           35 tips and 2 tours by <span style={{ color: "red" }}>13 locals</span>
         </h3>
@@ -111,6 +116,10 @@ const StyledTitle = styled.h1`
   font-family: "ProbaPro", sans-serif;
   font-weight: 600;
   margin-bottom: 10px;
+
+  @media (max-width: 800px) {
+    font-size: 4vw;
+  }
 `;
 
 const StyledContent = styled.div`
@@ -123,6 +132,10 @@ const StyledPanels = styled.div`
   ul {
     list-style-type: none;
     padding: 0;
+  }
+
+  @media (max-width: 800px) {
+    padding: 0 0 0 100px;
   }
 `;
 
@@ -165,6 +178,10 @@ const StyledLeftPanel = styled.div`
   }
 
   .ais-RefinementList-checkbox {
+    display: none;
+  }
+
+  @media (max-width: 800px) {
     display: none;
   }
 `;

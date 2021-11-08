@@ -33,6 +33,7 @@ export const StyledTitle = styled.div`
   @media (max-width: 800px) {
     font-size: 1vw;
     padding-bottom: 0;
+    white-space: wrap;
   }
 `;
 
