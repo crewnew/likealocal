@@ -1,4 +1,5 @@
 import { connect } from "react-redux";
+import { useHistory } from 'react-router-dom'
 import styled from "styled-components";
 import { instantMeiliSearch } from "@meilisearch/instant-meilisearch";
 import {
@@ -18,6 +19,7 @@ import { withRouter } from "react-router-dom";
 const searchClient = instantMeiliSearch("http://164.90.235.228/", "");
 
 function Search(props) {
+  console.log('props history', props)
   return (
     <div>
       <StyledResults>
@@ -55,7 +57,7 @@ function Search(props) {
               <div style={{ display: "none" }}>
                 <SearchBox defaultRefinement={props?.query.query} />
               </div>
-              <Hits hitComponent={Hit} />
+              <Hits hitComponent={Hit}/>
             </StyledRightPanel>
           </StyledPanels>
         </InstantSearch>
@@ -65,9 +67,10 @@ function Search(props) {
 }
 
 function Hit(props) {
-  const handleRedirect = (id) => {
+  const history = useHistory();
+  const handleRedirect = () => {
     console.log('props', props)
-    // history.push(`/${}/${id}`)
+    history.push(`/${props.hit.city_slug}/${props.hit.slug}`)
   };
 
   return (
@@ -100,7 +103,7 @@ const mapStateToProps = (state) => {
   };
 };
 
-export default withRouter(connect(mapStateToProps)(Search));
+export default connect(mapStateToProps)(Search);
 
 const StyledResults = styled.div`
   height: 200px;
