@@ -11,8 +11,8 @@ export const StyledCard = styled.div`
   position: relative;
 
   @media (max-width: 800px) {
-    width: 100%;
-    height: auto;
+    width: 120%;
+    height: 110%;
   }
 `;
 

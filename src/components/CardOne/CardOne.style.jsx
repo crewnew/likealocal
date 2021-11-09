@@ -114,13 +114,16 @@ export const StyledAvatarSecondImage = styled.img`
 `;
 
 export const StyledAvatarText = styled.div`
+  display: flex;
+  align-items: center;
   position: relative;
   top: 5px;
   left: -20px;
   z-index: 0;
+  width: 80%;
   height: 20px;
   font-family: "Proba Pro Medium";
-  font-size: 1vw;
+  font-size: 0.8vw;
   background-color: #fa006a;
   color: white;
   padding: 5px 10px 5px 25px;

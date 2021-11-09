@@ -34,4 +34,9 @@ const StyledCoverImage = styled.div`
   background-size: cover;
   background-position: center center;
   filter: brightness(50%);
+
+
+  @media (max-width: 800px){
+    height: 40vw;
+  }
 `;

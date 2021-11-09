@@ -22,6 +22,10 @@ export const StyledInput = styled.input`
   &:focus{
     outline: none;
   }
+
+  &::placeholder{
+    font-size: 0.8vw;
+  }
 `;
 
 export const StyledIcon = styled.div`
