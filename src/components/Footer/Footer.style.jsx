@@ -44,7 +44,7 @@ export const StyledColumn = styled.div`
 `;
 
 export const StyledItemHeader = styled(Link)`
-  color: #ff0000;
+  color: #E83324;
   font-weight: bold;
   font-family: "Proxima Nova";
   text-decoration: none;

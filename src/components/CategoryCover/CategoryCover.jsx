@@ -12,7 +12,7 @@ export default function CategoryCover({ city }) {
   console.log("city", city)
   return (
     <StyledCover>
-      <StyledCoverImage url= {data[city].image}/>
+      <StyledCoverImage url= {data[city]?.image}/>
       <StyledLeftSide>
         <StyledCoverQuote>
           Alternative bike tour: the best of street art in{" "}

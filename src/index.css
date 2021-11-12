@@ -22,6 +22,13 @@
 }
 
 @font-face {
+  font-family: "Proba Pro Regular";
+  src: local("Proba Pro"),
+    url("./fonts/ProbaPro/ProbaPro-Regular.otf") format("truetype");
+  /* font-weight: bold; */
+}
+
+@font-face {
   font-family: "The Secret";
   src: local("The Secret"),
     url("./fonts/TheSecret/TheSecret-Regular.ttf") format("truetype");
