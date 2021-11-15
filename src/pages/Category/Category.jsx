@@ -1,10 +1,8 @@
 import { withRouter } from "react-router-dom";
 import styled from "styled-components";
 import Slider from "react-slick";
-import {
-  useQuery,
-  gql,
-} from "@apollo/client";
+import { useQuery, gql } from "@apollo/client";
+import { useState } from "react";
 
 import Submenu from "../../components/Submenu/Submenu";
 import CategoryCover from "../../components/CategoryCover/CategoryCover";
@@ -18,6 +16,8 @@ import SideMenu from "../../components/SideMenu/SideMenu";
 import { useEffect } from "react";
 
 function Category({ history, match }) {
+  const [visible, setVisible] = useState(5);
+
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -48,6 +48,10 @@ function Category({ history, match }) {
     history.push(url);
   };
 
+  const loadMore = () => {
+    setVisible(visible + 5);
+  };
+
   const settings = {
     infinite: true,
     speed: 500,
@@ -74,7 +78,7 @@ function Category({ history, match }) {
   return (
     <div>
       <SocialMedia />
-      <CategoryCover city={match.params.slug}/>
+      <CategoryCover city={match.params.slug} />
       {/* <Submenu /> */}
       <Paragraph city={match.params.slug} />
 
@@ -122,7 +126,7 @@ function Category({ history, match }) {
           <SideMenu></SideMenu>
         </StyledSideMenu>
         <StyledCards>
-          {data?.places_place?.slice(0, 50).map((place, index) => {
+          {data?.places_place?.slice(0, visible).map((place, index) => {
             if (!place.visit_reason && !place.short_description) return null;
             return (
               <div style={{ marginBottom: "20px" }}>
@@ -144,6 +148,7 @@ function Category({ history, match }) {
               </div>
             );
           })}
+          <StyledButton onClick={loadMore}>Load More</StyledButton>
         </StyledCards>
       </StyledCategories>
     </div>
@@ -178,5 +183,22 @@ const StyledSideMenu = styled.div`
 const StyledCards = styled.div`
   display: flex;
   flex-direction: column;
+  align-items: center;
   width: 75%;
+`;
+
+const StyledButton = styled.button`
+  background: #ea3424;
+  color: white;
+  width: 200px;
+  border: none;
+  padding: 10px 12px;
+  cursor: pointer;
+  font-size: 20px;
+  font-family: "Proba Pro";
+  margin-top: 30px;
+
+  &:hover{
+    background: red;
+  }
 `;
