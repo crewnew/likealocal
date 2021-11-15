@@ -14,13 +14,14 @@ import Shopping from "../../assets/shopping.png";
 import Locals from "../../assets/locals.png";
 import Lists from "../../assets/lists.png";
 import AskLocals from "../../assets/ask-locals.png";
+import { withRouter } from "react-router-dom";
 
-export default function Navbar({ children }) {
+function Navbar({ children, match }) {
   return (
     <StyledMenu>
       <StyledMenuItems>
         <StyledMenuItem to="/">
-          <StyledLink>MADRID</StyledLink>
+          <StyledLink to="#">{match.params.slug.toUpperCase()}</StyledLink>
         </StyledMenuItem>
         <StyledMenuItem to="/">
           <StyledIcon src={ThingsToDo} />
@@ -58,3 +59,5 @@ export default function Navbar({ children }) {
     </StyledMenu>
   );
 }
+
+export default withRouter(Navbar);

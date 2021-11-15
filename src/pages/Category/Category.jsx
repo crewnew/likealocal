@@ -148,7 +148,7 @@ function Category({ history, match }) {
               </div>
             );
           })}
-          <StyledButton onClick={loadMore}>Load More</StyledButton>
+            <StyledButton onClick={loadMore}>Load More</StyledButton>
         </StyledCards>
       </StyledCategories>
     </div>
@@ -198,7 +198,7 @@ const StyledButton = styled.button`
   font-family: "Proba Pro";
   margin-top: 30px;
 
-  &:hover{
+  &:hover {
     background: red;
   }
 `;
