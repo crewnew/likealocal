@@ -55,7 +55,7 @@ export const StyledItemHeader = styled(Link)`
   }
 `;
 
-export const StyledFooterItem = styled(Link)`
+export const StyledFooterItem = styled.div`
   color: black;
   font-family: "Proxima Nova";
   text-decoration: none;
@@ -65,7 +65,7 @@ export const StyledFooterItem = styled(Link)`
   }
 `;
 
-export const StyledSocialMediaItem= styled(Link)`
+export const StyledSocialMediaItem= styled.div`
   color: black;
   font-family: "Proxima Nova";
   text-decoration: none;
@@ -80,6 +80,7 @@ export const StyledSocialMediaItem= styled(Link)`
 export const StyledSocialMediaIcon = styled.img`
   width: 20px;
   margin-right:5px;
+
 
   @media (max-width: 768px) {
    width: 10px;

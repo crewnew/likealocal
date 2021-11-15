@@ -18,6 +18,26 @@ import FooterInstagram from "../../assets/instagram-footer.png";
 import FooterPinterest from "../../assets/pinterest-footer.png";
 
 export default function Footer() {
+  const fbRedirect = () => {
+    window.location.href = "https://www.facebook.com/likealocalguide";
+  };
+  const twitterRedirect = () => {
+    window.location.href = "https://twitter.com/likealocal";
+  };
+  const instagramRedirect = () => {
+    window.location.href = "https://www.instagram.com/likealocalguide/";
+  };
+  const foursquareRedirect = () => {
+    window.location.href =
+      "https://foursquare.com/p/like-a-local-guide/30830398";
+  };
+  const pinterestRedirect = () => {
+    window.location.href =
+      "https://www.pinterest.com/likealocalguide/_created/";
+  };
+  const blogRedirect = () => {
+    window.location.href = "https://www.likealocalguide.com/blog/";
+  };
   return (
     <StyledFooter>
       <StyledLogo src={FooterLogo} />
@@ -48,31 +68,30 @@ export default function Footer() {
         </StyledColumn>
 
         <StyledColumn>
-          <StyledSocialMediaItem>
+          <StyledSocialMediaItem onClick={blogRedirect}>
             <StyledSocialMediaIcon src={FooterBlog} />
             <StyledFooterItem>Blog</StyledFooterItem>
           </StyledSocialMediaItem>
-          <StyledSocialMediaItem>
+          <StyledSocialMediaItem onClick={fbRedirect}>
             <StyledSocialMediaIcon src={FooterFacebook} />
             <StyledFooterItem>Facebook</StyledFooterItem>
           </StyledSocialMediaItem>
-          <StyledSocialMediaItem>
+          <StyledSocialMediaItem onClick={foursquareRedirect}>
             <StyledSocialMediaIcon src={FooterFoursquare} />
             <StyledFooterItem>Foursquare</StyledFooterItem>
           </StyledSocialMediaItem>
-          <StyledSocialMediaItem>
+          <StyledSocialMediaItem onClick={pinterestRedirect}>
             <StyledSocialMediaIcon src={FooterPinterest} />
             <StyledFooterItem>Pinterest</StyledFooterItem>
           </StyledSocialMediaItem>
-          <StyledSocialMediaItem>
+          <StyledSocialMediaItem onClick={twitterRedirect}>
             <StyledSocialMediaIcon src={FooterTwitter} />
             <StyledFooterItem>Twitter</StyledFooterItem>
           </StyledSocialMediaItem>
-          <StyledSocialMediaItem>
+          <StyledSocialMediaItem onClick={instagramRedirect}>
             <StyledSocialMediaIcon src={FooterInstagram} />
             <StyledFooterItem>Instagram</StyledFooterItem>
           </StyledSocialMediaItem>
-        
         </StyledColumn>
       </StyledColumns>
     </StyledFooter>
