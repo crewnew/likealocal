@@ -12,27 +12,29 @@ import LocationImg from "../../assets/location.png";
 import TimeImg from "../../assets/time.png";
 import LinkImg from "../../assets/link.png";
 import PhoneImg from "../../assets/phone.png";
+// import { MapContainer } from "./MapContainer";
 
 export default function GMaps() {
   return (
     <StyledCard>
       <StyledImage src={GMapsImg}/>
+      {/* <MapContainer /> */}
       <StyledLocation>
-        <StyledIcon src={LocationImg}/>
+        <StyledIcon src={LocationImg} />
         <StyledText>
           Gourmet Experience Gran Via El Corte Inglés Madrid
         </StyledText>
       </StyledLocation>
       <StyledLocation>
-        <StyledIcon src={TimeImg}/>
+        <StyledIcon src={TimeImg} />
         <StyledText>Mo-Su: 10:00-12:00</StyledText>
       </StyledLocation>
       <StyledLocation>
-        <StyledIcon src={PhoneImg}/>
+        <StyledIcon src={PhoneImg} />
         <StyledText>+34913798000</StyledText>
       </StyledLocation>
       <StyledLocation>
-        <StyledIcon src={LinkImg}/>
+        <StyledIcon src={LinkImg} />
         <StyledLink>aptc.supermercadoelcorteingle…</StyledLink>
       </StyledLocation>
     </StyledCard>

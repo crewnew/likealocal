@@ -285,80 +285,419 @@ export default {
     image:
       "https://c0.wallpaperflare.com/preview/382/447/726/high-rise-buildings-during-night-time.jpg",
   },
-  "cologne": {
+  cologne: {
     id: 74,
     title: "Cologne",
     slug: "cologne",
     image:
       "https://wallpaperaccess.com/full/1787747.jpg",
   },
-  "copenhagen": {
+  copenhagen: {
     id: 74,
     title: "Copenhagen",
     slug: "copenhagen",
     image:
       "https://wallpaperaccess.com/full/1179981.jpg",
   },
-  "damascus": {
+  damascus: {
     id: 74,
     title: "Damascus",
     slug: "damascus",
     image:
       "https://wallpaperaccess.com/full/1310708.jpg",
   },
-  "delhi": {
+  delhi: {
     id: 74,
     title: "Delhi",
     slug: "delhi",
     image:
       "https://wallpaperaccess.com/full/3591286.jpg",
   },
-  "denpasar": {
+  denpasar: {
     id: 74,
     title: "Denpasar",
     slug: "denpasar",
     image:
       "https://c0.wallpaperflare.com/preview/745/25/116/person-inside-airplane-flying-at-high-altitude-with-view-of-island-during-daytime.jpg",
   },
-  "dubai": {
+  dubai: {
     id: 74,
     title: "Dubai",
     slug: "dubai",
     image:
       "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8ZHViYWl8ZW58MHx8MHx8&ixlib=rb-1.2.1&w=1000&q=80",
   },
-  "dublin": {
+  dublin: {
     id: 74,
     title: "Dublin",
     slug: "dublin",
     image:
       "https://wallpaperaccess.com/full/726990.jpg",
   },
-  "edinburgh": {
+  edinburgh: {
     id: 74,
     title: "Edinburgh",
     slug: "edinburgh",
     image:
       "https://wallpaperaccess.com/full/914315.jpg",
   },
-  "eindhoven": {
+  eindhoven: {
     id: 74,
     title: "Eindhoven",
     slug: "eindhoven",
     image:
       "https://eipo.nl/wp-content/uploads/2017/07/Eindhoven_night_2-1024x492.jpg",
   },
-  "fez": {
+  fez: {
     id: 74,
-    title: "fez",
+    title: "Fez",
     slug: "fez",
     image:
       "https://media.istockphoto.com/photos/traditional-leather-tannery-fez-picture-id948695560?k=20&m=948695560&s=612x612&w=0&h=Ud8ds10lYY_TR_mmTggSdNVD7oimPlQHo-0UlJ5ZRRM=",
   },
-  "frankfurt": {
+  frankfurt: {
     id: 74,
-    title: "frankfurt",
+    title: "Frankfurt",
     slug: "frankfurt",
     image: "https://images7.alphacoders.com/313/thumb-1920-313888.jpg",
-  }
+  },
+  gdansk: {
+    id: 74,
+    title: "Gdansk",
+    slug: "gdansk",
+    image: "https://wallpaperaccess.com/full/6281273.jpg",
+  },
+  geneva: {
+    id: 74,
+    title: "Geneva",
+    slug: "geneva",
+    image: "https://wallpaperaccess.com/full/2036161.jpg",
+  },
+  hamburg: {
+    id: 74,
+    title: "Hamburg",
+    slug: "hamburg",
+    image: "https://wallpaperaccess.com/full/1179995.jpg",
+  },
+  helsinki: {
+    id: 74,
+    title: "Helsinki",
+    slug: "helsinki",
+    image: "https://wallpaperaccess.com/full/256265.jpg",
+  },
+  "ibiza-town": {
+    id: 74,
+    title: "Ibiza Town",
+    slug: "ibiza-town",
+    image: "https://wallpaperaccess.com/full/1646542.jpg",
+  },
+  kaasan: {
+    id: 74,
+    title: "Kaasan",
+    slug: "kaasan",
+    image: "https://transphoto.org/photo/11/62/77/1162772.jpg",
+  },
+  kaunas: {
+    id: 74,
+    title: "Kaunas",
+    slug: "kaunas",
+    image: "https://adventures.com/media/20342/s-kaunas-city-panoramic-view-summer-church-architecture-buildings-old-town-lithuania.jpg",
+  },
+  krakow: {
+    id: 74,
+    title: "Krakow",
+    slug: "krakow",
+    image: "https://s27363.pcdn.co/wp-content/uploads/2020/05/Best-things-to-do-in-Krakow.jpg.optimal.jpg",
+  },
+  "las-palmas": {
+    id: 74,
+    title: "Las Palmas",
+    slug: "las-palmas",
+    image: "https://scandinaviantraveler.com/sites/default/files/styles/article_top_full_imagecustom_user_mobile_2x/public/las-palmas-old-uptown-1140x619.jpg?itok=LcYM25ki",
+  },
+  lisbon: {
+    id: 74,
+    title: "Lisbon",
+    slug: "lisbon",
+    image: "https://travelingcanucks.com/wp-content/uploads/2018/06/Lisbon-2.jpg",
+  },
+  london: {
+    id: 74,
+    title: "London",
+    slug: "london",
+    image: "https://www.cityam.com/wp-content/uploads/2020/02/London_Tower_Bridge_City.jpg",
+  },
+  "los-angeles": {
+    id: 74,
+    title: "Los Angeles",
+    slug: "los-angeles",
+    image: "https://assets.nrdc.org/sites/default/files/styles/full_content--retina/public/media-uploads/owen-lystrup-bolgim0qwkg-unsplash.jpg?itok=E92FZlIx",
+  },
+  lund: {
+    id: 74,
+    title: "Lund",
+    slug: "lund",
+    image: "https://www.themayor.eu/web/files/cities/261/main_image/thumb_1200x630_Lund1.jpg",
+  },
+  malaga: {
+    id: 74,
+    title: "Malaga",
+    slug: "malaga",
+    image: "https://content.r9cdn.net/rimg/dimg/ee/b1/8afb451d-city-5309-15cef627e8c.jpg?width=1750&height=1000&xhint=1741&yhint=1162&crop=true",
+  },
+  manchester: {
+    id: 74,
+    title: "Manchester",
+    slug: "manchester",
+    image: "https://ctfimages.intoglobal.com/xw2h6mjophtz/1TYSrypcMzY3kKddGhuZo1/e69f694bcf4f68aa214016cfc4f4259f/manchester_Skyline__Craig_1_small.jpg",
+  },
+  marseille: {
+    id: 74,
+    title: "Marseille",
+    slug: "marseille",
+    image: "https://i.ytimg.com/vi/UFygS9nflJQ/maxresdefault.jpg",
+  },
+  medellin: {
+    id: 74,
+    title: "Medellin",
+    slug: "medellin",
+    image: "https://i.ytimg.com/vi/UFygS9nflJQ/maxresdefault.jpg",
+  },
+  melbourne: {
+    id: 74,
+    title: "Melbourne",
+    slug: "melbourne",
+    image: "https://i.ytimg.com/vi/UFygS9nflJQ/maxresdefault.jpg",
+  },
+  milan: {
+    id: 74,
+    title: "Milan",
+    slug: "milan",
+    image: "https://i.ytimg.com/vi/UFygS9nflJQ/maxresdefault.jpg",
+  },
+  minsk: {
+    id: 74,
+    title: "Minsk",
+    slug: "minsk",
+    image: "https://i.ytimg.com/vi/UFygS9nflJQ/maxresdefault.jpg",
+  },
+  moscow: {
+    id: 74,
+    title: "Moscow",
+    slug: "moscow",
+    image: "https://i.ytimg.com/vi/UFygS9nflJQ/maxresdefault.jpg",
+  },
+  munich: {
+    id: 74,
+    title: "Munich",
+    slug: "munich",
+    image: "https://i.ytimg.com/vi/UFygS9nflJQ/maxresdefault.jpg",
+  },
+  narva: {
+    id: 74,
+    title: "Narva",
+    slug: "narva",
+    image: "https://c1.wallpaperflare.com/preview/535/156/894/narva-estonia-castle.jpg",
+  },
+  "new-york": {
+    id: 74,
+    title: "New York",
+    slug: "new-york",
+    image: "https://cdn.wallpapersafari.com/94/63/UT1EgX.jpg",
+  },
+  paraiso: {
+    id: 74,
+    title: "Paraiso",
+    slug: "paraiso",
+    image: "https://c0.wallpaperflare.com/preview/577/640/904/brazil-paraiso-viaduto-santa-generosa.jpg",
+  },
+  paris: {
+    id: 74,
+    title: "Paris",
+    slug: "paris",
+    image: "https://c4.wallpaperflare.com/wallpaper/340/910/565/cities-paris-building-city-wallpaper-preview.jpg",
+  },
+  "playa-del-inglés": {
+    id: 74,
+    title: "Playa del Inglés",
+    slug: "playa-del-inglés",
+    image: "https://media.istockphoto.com/photos/resort-town-playa-del-ingles-maspalomas-gran-canaria-picture-id484335974?k=20&m=484335974&s=612x612&w=0&h=Dg3Q1vaOFlnui27o4Fn14VX-bC5zq4epLzEVlDIvrXA=",
+  },
+  pokhara: {
+    id: 74,
+    title: "Pokhara",
+    slug: "pokhara",
+    image: "https://wallpapercave.com/wp/wp7247135.jpg",
+  },
+  porto: {
+    id: 74,
+    title: "Porto",
+    slug: "porto",
+    image: "https://s2.best-wallpaper.net/wallpaper/1920x1080/1901/Portugal-Porto-city-river-boat-bridge-lights-dusk_1920x1080.jpg",
+  },
+  prague: {
+    id: 74,
+    title: "Prague",
+    slug: "prague",
+    image: "https://wallpaperaccess.com/full/41215.jpg",
+  },
+  pärnu: {
+    id: 74,
+    title: "Pärnu",
+    slug: "pärnu",
+    image: "https://static.visitestonia.com/images/3513227/1600_900_false_false_fc6ecd0c7af2b114646ecdfef2c0f641.jpg",
+  },
+  riga: {
+    id: 74,
+    title: "Riga",
+    slug: "riga",
+    image: "https://wallpaperaccess.com/full/1564840.jpg",
+  },
+  "rio-de-janeiro": {
+    id: 74,
+    title: "Rio de Janeiro",
+    slug: "rio-de-janeiro",
+    image: "https://wallpapercave.com/wp/wp5477997.jpg",
+  },
+  rome: {
+    id: 74,
+    title: "Rome",
+    slug: "rome",
+    image: "https://images.pexels.com/photos/1797161/pexels-photo-1797161.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+  },
+  rotterdam: {
+    id: 74,
+    title: "Rotterdam",
+    slug: "rotterdam",
+    image: "https://wallup.net/wp-content/uploads/2018/03/23/560766-blue-dark-Rotterdam-lights-cityscape-748x499.jpg",
+  },
+  "san-francisco": {
+    id: 74,
+    title: "San Francisco",
+    slug: "san-francisco",
+    image: "https://eskipaper.com/images/san-francisco-wallpaper-hd-1.jpg",
+  },
+
+  "san-jose": {
+    id: 74,
+    title: "San Josee",
+    slug: "san-jose",
+    image: "https://img.wallpapersafari.com/desktop/1024/576/1/1/TIywR1.jpg",
+  },
+  "sana'a": {
+    id: 74,
+    title: "Sana'a",
+    slug: "sana'a",
+    image: "https://c4.wallpaperflare.com/wallpaper/909/117/129/cities-sana-a-al-saleh-mosque-minaret-wallpaper-preview.jpg",
+  },
+  seoul: {
+    id: 74,
+    title: "Seoul",
+    slug: "seoul",
+    image: "https://wallpaperaccess.com/full/6245.jpg",
+  },
+  siegen: {
+    id: 74,
+    title: "Siegen",
+    slug: "siegen",
+    image: "https://media.istockphoto.com/photos/panorama-of-the-village-siegen-at-dusk-picture-id637160128?b=1&k=20&m=637160128&s=170667a&w=0&h=UK5ApAB0j9wQ9cpT_P_uD6EDMvqd0vPTS5WE53L-Ulk=",
+  },
+  "st-petersburg": {
+    id: 74,
+    title: "St Petersburg",
+    slug: "st-petersburg",
+    image: "https://c4.wallpaperflare.com/wallpaper/246/533/176/saint-petersburg-city-in-russia-wallpaper-preview.jpg",
+  },
+  stockholm: {
+    id: 74,
+    title: "Stockholm",
+    slug: "stockholm",
+    image: "https://wallpaperaccess.com/full/1093976.jpg",
+  },
+  "são-paulo": {
+    id: 74,
+    title: "São Paulo",
+    slug: "são-paulo",
+    image: "https://wallpaperaccess.com/full/2170265.jpg",
+  },
+  tallinn: {
+    id: 74,
+    title: "Tallinn",
+    slug: "tallinn",
+    image: "https://wallpaperaccess.com/full/1667337.jpg",
+  },
+  tartu: {
+    id: 74,
+    title: "Tartu",
+    slug: "tartu",
+    image: "https://vistapointe.net/images/tartu-1.jpg",
+  },
+  tbilisi: {
+    id: 74,
+    title: "Tbilisi",
+    slug: "tbilisi",
+    image: "https://hdwallpaperim.com/wp-content/uploads/2017/08/23/467566-Tbilisi-Georgia.jpg",
+  },
+  thessaloniki: {
+    id: 74,
+    title: "Thessaloniki",
+    slug: "thessaloniki",
+    image: "https://wallpapercave.com/wp/wp7238602.jpg",
+  },
+  tokyo: {
+    id: 74,
+    title: "Tokyo",
+    slug: "tokyo",
+    image: "https://wallpaperaccess.com/full/19067.jpg",
+  },
+  turin: {
+    id: 74,
+    title: "Turin",
+    slug: "Turin",
+    image: "https://images.unsplash.com/photo-1610651219730-6b580d616e72?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8dHVyaW4lMjBpdGFseXxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&w=1000&q=80",
+  },
+  utrecht: {
+    id: 74,
+    title: "Utrecht",
+    slug: "utrecht",
+    image: "https://images.unsplash.com/photo-1486631481453-036d90ebd89b?ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8dXRyZWNodHxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&w=1000&q=80",
+  },
+  vancouver: {
+    id: 74,
+    title: "Vancouver",
+    slug: "vancouver",
+    image: "https://wallpaperaccess.com/full/2029253.jpg",
+  },
+  vienna: {
+    id: 74,
+    title: "Vienna",
+    slug: "vienna",
+    image: "https://wallpapercave.com/wp/wp1969351.jpg",
+  },
+  Vilnius: {
+    id: 74,
+    title: "Vilnius",
+    slug: "vilnius",
+    image: "https://c4.wallpaperflare.com/wallpaper/5/796/1013/long-exposure-vilnius-cityscape-lithuania-wallpaper-preview.jpg",
+  },
+  Warsaw: {
+    id: 74,
+    title: "Warsaw",
+    slug: "warsaw",
+    image: "https://c4.wallpaperflare.com/wallpaper/295/17/318/poland-warsaw-skyscraper-cityscape-wallpaper-preview.jpg",
+  },
+  "washington-dc": {
+    id: 74,
+    title: "Washington DC",
+    slug: "washington-dc",
+    image: "https://wallpaperaccess.com/full/459037.jpg",
+  },
+  wroclaw: {
+    id: 74,
+    title: "Wroclaw",
+    slug: "wroclaw",
+    image: "https://c4.wallpaperflare.com/wallpaper/224/979/602/wroclaw-wallpaper-preview.jpg",
+  },
 };
+
+

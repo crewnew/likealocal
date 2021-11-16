@@ -22,6 +22,7 @@ export const StyledIcon = styled.img`
 
   &:hover {
     cursor: pointer;
+    transform: scale(1.1);
   }
 
   @media (max-width: 768px) {

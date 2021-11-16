@@ -62,13 +62,17 @@ export const StyledColumn = styled.div`
   }
 `;
 
-export const StyledItem = styled(Link)`
+export const StyledItem = styled.div`
   color: black;
   font-size: 2vh;
   font-family: "Proba Pro Regular";
   font-weight: 200;
   text-decoration: none;
   margin: 5px;
+
+  &:hover{
+      cursor: pointer;
+  }
 
   @media (max-width: 800px) {
     font-size: 0.5vh;
