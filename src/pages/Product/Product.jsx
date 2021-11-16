@@ -16,8 +16,8 @@ import Answer from "../../components/Answer/Answer";
 import { useEffect } from "react";
 import { useQuery, gql } from "@apollo/client";
 
-function Product({ match }) {
-  const PLACES_QUERY = gql`
+function Product({ history, match }) {
+  const PLACE_QUERY = gql`
   query MyQuery {
     places_place(filter: {slug: {_eq: "${match.params.slug}"}}) {
       name
@@ -33,11 +33,51 @@ function Product({ match }) {
     }
   }
   `;
-  const { loading, error, data } = useQuery(PLACES_QUERY);
+
+  const PLACES_QUERY_BY_CITY = gql`
+  query PlacesQuery {
+    places_place(filter: {city_id: {slug: {_contains: "${match.params.city}"}}}) {
+      id
+      name
+      slug
+      address
+      created
+      description
+      short_description
+      google_price_level
+      google_rating
+      google_name
+      phone_number
+      status
+      website
+      visit_reason
+      city_id {
+        short_description
+      }
+    }
+  }
+`;
+
+  const { loading, error, data } = useQuery(PLACE_QUERY);
+  const {
+    loading: citiesLoading,
+    error: citiesError,
+    data: citiesData,
+  } = useQuery(PLACES_QUERY_BY_CITY);
+
+  const titleClick = (url) => {
+    history.push(url);
+  };
 
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
+  
+  useEffect(() => {
+    if(data?.places_place.length === 0) {
+      history.push('/editors/suggest-city')
+    }
+  }, [data]);
 
   const settings = {
     infinite: true,
@@ -62,7 +102,8 @@ function Product({ match }) {
       },
     ],
   };
-
+  const string =
+    match.params.city.charAt(0).toUpperCase() + match.params.city.slice(1);
   return (
     <div>
       <SocialMedia />
@@ -82,38 +123,63 @@ function Product({ match }) {
       <Question />
       <Answer />
       <StyledSlider>
-        <h2>🔥 Top 4 Tours &#038; Experiences in {match.params.city}</h2>
+        <h2>🔥 Top 4 Tours &#038; Experiences in {string}</h2>
         <Slider {...settings} style={{ width: "100%" }}>
-          <CardTwo />
-          <CardTwo />
-          <CardTwo />
-          <CardTwo />
-          <CardTwo />
+          {citiesData?.places_place?.slice(0, 10).map((place, index) => {
+            return (
+              <CardTwo
+                key={index}
+                title={place.name}
+                slug={place.slug}
+                visit_reason={place.visit_reason}
+                {...place}
+                titleClick={() => {
+                  titleClick(`/${match.params.city}/${place.slug}`);
+                  window.scrollTo(0, 0);
+                }}
+              />
+            );
+          })}
         </Slider>
       </StyledSlider>
-      <StyledFirstGrid>
-        <CardFour />
-        <CardFour />
-        <CardFour />
-        <CardFour />
-        <CardFour />
-        <CardFour />
-        <CardFour />
-        <CardFour />
-      </StyledFirstGrid>
-      <StyledSecondGrid>
-        <CardFive />
-        <CardFive />
-        <CardFive />
-        <CardFive />
-        <CardFive />
-        <CardFive />
-      </StyledSecondGrid>
+      <StyledDiv>
+        <h2>Similar places in {string}</h2>
+        <StyledFirstGrid>
+          {citiesData?.places_place?.slice(10, 18).map((place, index) => (
+            <CardFour
+              title={place.name}
+              slug={`/${match.params.city}/${place.slug}`}
+            />
+          ))}
+        </StyledFirstGrid>
+      </StyledDiv>
+      <StyledDiv>
+        <h2>Popular Tours &amp; Tips in {string}</h2>
+        <StyledSecondGrid>
+          <CardFive />
+          <CardFive />
+          <CardFive />
+          <CardFive />
+          <CardFive />
+          <CardFive />
+        </StyledSecondGrid>
+      </StyledDiv>
     </div>
   );
 }
 
 export default withRouter(Product);
+
+const StyledDiv = styled.div`
+  padding: 0 100px;
+  margin-top: 100px;
+
+  h2 {
+    font-size: 2vw;
+    font-family: "Proba Pro";
+    color: #404040;
+  }
+`;
 
 const StyledSlider = styled.div`
   margin-top: 100px;
@@ -121,23 +187,24 @@ const StyledSlider = styled.div`
   margin-left: 5%;
 
   h2 {
-    margin-left: 20px;
+    margin-left: 2vw;
     font-family: "Proba Pro";
+    color: #404040;
   }
 
   @media (max-width: 800px) {
     h2 {
-      font-size: 3vw;
+      font-size: 2vw;
     }
   }
 `;
 
 const StyledFirstGrid = styled.div`
-  margin-top: 150px;
+  margin-top: 30px;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  grid-gap: 50px;
-  padding: 0px 100px;
+  grid-gap: 30px;
+  padding: 0;
 
   @media (max-width: 800px) {
     margin-left: 40px;
@@ -147,11 +214,11 @@ const StyledFirstGrid = styled.div`
 `;
 
 const StyledSecondGrid = styled.div`
-  margin-top: 150px;
+  margin-top: 30px;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-  grid-gap: 50px;
-  padding: 0px 100px;
+  grid-gap: 30px;
+  padding: 0;
 
   @media (max-width: 800px) {
     width: 110%;

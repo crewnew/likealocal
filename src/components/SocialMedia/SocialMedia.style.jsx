@@ -5,6 +5,7 @@ export const StyledSocialMedia = styled.div`
   display: flex;
   flex-direction: column;
   position: fixed;
+  top: 30%;
   left: 0;
   z-index: 1;
 `;
@@ -22,7 +23,7 @@ export const StyledIcon = styled.img`
 
   &:hover {
     cursor: pointer;
-    transform: scale(1.1);
+    transform: scaleX(1.2);
   }
 
   @media (max-width: 768px) {

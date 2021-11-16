@@ -56,7 +56,7 @@ export const StyledRating = styled.div`
 
 export const StyledHeartIcon = styled.img`
   margin: 2px;
-  width: 5%;
+  width: 10%;
 `;
 
 export const StyledReviews = styled.div`

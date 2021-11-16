@@ -1,3 +1,5 @@
+import { useHistory } from 'react-router-dom';
+
 import {
   StyledCard,
   StyledImage,
@@ -6,15 +8,23 @@ import {
   StyledText,
 } from "./CardFour.style";
 
-import CardImage from '../../assets/card-four-image.jpeg';
+import CardImage from "../../assets/card-four-image.jpeg";
 
-export default function CardFour() {
+export default function CardFour({title, slug}) {
+  const history = useHistory();
   return (
     <StyledCard>
-      <StyledImage src={CardImage}/>
+      <StyledImage src={CardImage} />
       <StyledBody>
-      <StyledTitle>Azotea Circulo de Bellas Arte</StyledTitle>
-      <StyledText>By Brian</StyledText>
+        <StyledTitle onClick={() => {
+            history.push(slug);
+            window.scrollTo(0, 0);
+          }}>
+          {title
+            ? title
+            : "Alternative bike tour: the best of street art in Madrid"}
+        </StyledTitle>
+        <StyledText>By Brian</StyledText>
       </StyledBody>
     </StyledCard>
   );

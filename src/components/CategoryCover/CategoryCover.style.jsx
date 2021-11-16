@@ -18,7 +18,7 @@ export const StyledLeftSide = styled.div`
 `;
 
 export const StyledCoverQuote = styled.div`
-  width: 45%;
+  width: 75%;
   font-family: 'Proba Pro';
   font-size: 3vw;
   font-weight: 600;

@@ -33,6 +33,7 @@ export default function CardThree({
   address,
   phone_number,
   titleClick,
+  tour_price
 }) {
   return (
     <StyledCard>
@@ -80,7 +81,7 @@ export default function CardThree({
             <StyledBooking>BOOKED BY 219 PEOPLE!</StyledBooking>
           </StyledTop> */}
           <StyledBottom>
-            <StyledPrice>15 EUR</StyledPrice>
+            <StyledPrice>{tour_price? tour_price : "15 EUR"}</StyledPrice>
             <StyledText>per person</StyledText>
             {/* <StyledButton>Book now</StyledButton> */}
           </StyledBottom>

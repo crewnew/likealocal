@@ -22,9 +22,7 @@ import {
         <StyledBanner>FEATURED</StyledBanner>
         <StyledImage src={CardImage} />
         <StyledTitle onClick={titleClick}>
-          {visit_reason
-            ? visit_reason.substring(0, 80) + "..."
-            : title
+          {title
             ? title
             : "Alternative bike tour: the best of street art in Madrid"}
         </StyledTitle>

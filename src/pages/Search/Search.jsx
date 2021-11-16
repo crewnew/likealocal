@@ -19,14 +19,14 @@ import { withRouter } from "react-router-dom";
 const searchClient = instantMeiliSearch("http://164.90.235.228/", "");
 
 function Search(props) {
-  console.log('props history', props)
+  const string = props.query.location[0].toUpperCase()+props.query.location.slice(1);
   return (
     <div>
       <StyledResults>
         <StyledTitle>
           Search results for: {props.query.query}{" "}
           {props.query.location && props.query.location !== "search"
-            ? `in ${props.query.location}`
+            ? `in ${string}`
             : ""}
         </StyledTitle>
         <h3>

@@ -33,9 +33,7 @@ export default function CardOne({ title, visit_reason, titleClick }) {
         <StyledAvatarText>Choose your favorite local!</StyledAvatarText>
       </StyledLocals>
       <StyledTitle onClick={titleClick}>
-        {visit_reason
-          ? visit_reason.substring(0, 80) + "..."
-          : title
+        {title
           ? title
           : "Alternative bike tour: the best of street art in Madrid"}
       </StyledTitle>

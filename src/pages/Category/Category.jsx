@@ -38,11 +38,20 @@ function Category({ history, match }) {
         status
         website
         visit_reason
+        city_id {
+          short_description
+        }
       }
     }
   `;
 
   const { loading, error, data } = useQuery(PLACES_QUERY);
+  
+  useEffect(() => {
+    if(data?.places_place.length === 0) {
+      history.push('/editors/suggest-city')
+    }
+  }, [data])
 
   const titleClick = (url) => {
     history.push(url);
@@ -74,11 +83,11 @@ function Category({ history, match }) {
       },
     ],
   };
-
+  const string = match.params.slug.charAt(0).toUpperCase() + match.params.slug.slice(1);
   return (
     <div>
       <SocialMedia />
-      <CategoryCover city={match.params.slug} />
+      <CategoryCover city={match.params.slug} description={data?.places_place[0]?.city_id?.short_description} />
       {/* <Submenu /> */}
       <Paragraph city={match.params.slug} />
 
@@ -103,7 +112,7 @@ function Category({ history, match }) {
       </StyledSlider>
 
       <StyledSlider>
-        <h2>Recommended tours in {match.params.slug}</h2>
+        <h2>Recommended tours in {string}</h2>
         <Slider {...settings} style={{ width: "100%" }}>
           {data?.places_place?.slice(11, 20).map((place, index) => {
             return (
@@ -121,41 +130,54 @@ function Category({ history, match }) {
         </Slider>
       </StyledSlider>
 
-      <StyledCategories>
-        <StyledSideMenu>
-          <SideMenu></SideMenu>
-        </StyledSideMenu>
-        <StyledCards>
-          {data?.places_place?.slice(0, visible).map((place, index) => {
-            if (!place.visit_reason && !place.short_description) return null;
-            return (
-              <div style={{ marginBottom: "20px" }}>
-                <CardThree
-                  title={place.name}
-                  slug={place.slug}
-                  reason={
-                    place.visit_reason
-                      ? place.visit_reason
-                      : place.short_description
-                  }
-                  address={place.address}
-                  phone_number={place.phone_number}
-                  {...place}
-                  titleClick={() =>
-                    titleClick(`${match.params.slug}/${place.slug}`)
-                  }
-                />
-              </div>
-            );
-          })}
+      <StyledDiv>
+        <h2>All tours in {string}</h2>
+        <StyledCategories>
+          <StyledSideMenu>
+            <SideMenu></SideMenu>
+          </StyledSideMenu>
+          <StyledCards>
+            {data?.places_place?.slice(0, visible).map((place, index) => {
+              if (!place.visit_reason && !place.short_description) return null;
+              return (
+                <div style={{ marginBottom: "20px" }}>
+                  <CardThree
+                    title={place.name}
+                    slug={place.slug}
+                    reason={
+                      place.visit_reason
+                        ? place.visit_reason
+                        : place.short_description
+                    }
+                    address={place.address}
+                    phone_number={place.phone_number}
+                    {...place}
+                    titleClick={() =>
+                      titleClick(`${match.params.slug}/${place.slug}`)
+                    }
+                  />
+                </div>
+              );
+            })}
             <StyledButton onClick={loadMore}>Load More</StyledButton>
-        </StyledCards>
-      </StyledCategories>
+          </StyledCards>
+        </StyledCategories>
+      </StyledDiv>
     </div>
   );
 }
 
 export default withRouter(Category);
+
+const StyledDiv = styled.div`
+  padding: 0 100px;
+  margin-top: 100px;
+
+  h2 {
+    font-size: 2.5vw;
+    font-family: "Proba Pro";
+  }
+`;
 
 const StyledSlider = styled.div`
   margin-top: 40px;
@@ -172,8 +194,7 @@ const StyledSlider = styled.div`
 const StyledCategories = styled.div`
   display: flex;
   flex-direction: row;
-  margin-top: 100px;
-  padding: 0 90px;
+  margin-top: 20px;
 `;
 
 const StyledSideMenu = styled.div`

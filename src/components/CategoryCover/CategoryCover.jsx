@@ -8,17 +8,16 @@ import {
 import styled from "styled-components";
 import data from './data';
 
-export default function CategoryCover({ city }) {
+export default function CategoryCover({ city, description }) {
   console.log("city", city)
   return (
     <StyledCover>
       <StyledCoverImage url= {data[city]?.image}/>
       <StyledLeftSide>
         <StyledCoverQuote>
-          Alternative bike tour: the best of street art in{" "}
-          {city.charAt(0).toUpperCase() + city.slice(1)}
+          {description || `Explore ${city.charAt(0).toUpperCase() + city.slice(1)} with a local guide`}
         </StyledCoverQuote>
-        <StyledCoverButton>Book from €15/ per person</StyledCoverButton>
+        <StyledCoverButton>Explore</StyledCoverButton>
       </StyledLeftSide>
     </StyledCover>
   );

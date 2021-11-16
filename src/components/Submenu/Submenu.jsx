@@ -17,11 +17,12 @@ import AskLocals from "../../assets/ask-locals.png";
 import { withRouter } from "react-router-dom";
 
 function Navbar({ children, match }) {
+  const pathname = window.location.pathname.split("/")[1];
   return (
     <StyledMenu>
       <StyledMenuItems>
         <StyledMenuItem to="/">
-          <StyledLink to="#">{match.params?.slug?.toUpperCase()}</StyledLink>
+          <StyledLink to="#">{(pathname !== "search") ? pathname.toUpperCase() : null}</StyledLink>
         </StyledMenuItem>
         <StyledMenuItem to="/">
           <StyledIcon src={ThingsToDo} />
