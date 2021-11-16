@@ -21,7 +21,7 @@ function Navbar({ children, match }) {
     <StyledMenu>
       <StyledMenuItems>
         <StyledMenuItem to="/">
-          <StyledLink to="#">{match.params.slug.toUpperCase()}</StyledLink>
+          <StyledLink to="#">{match.params?.slug?.toUpperCase()}</StyledLink>
         </StyledMenuItem>
         <StyledMenuItem to="/">
           <StyledIcon src={ThingsToDo} />

@@ -69,7 +69,7 @@ export default {
       "https://wallpaperbat.com/img/366877-new-york-city-hdr-ultra-hd-desktop-background-wallpaper-for-4k-uhd.jpg",
     description: "369 tips and 65 tours by 90 locals",
   },
-  "abu-dhabi": {
+  "abudhabi": {
     id: 74,
     title: "ABU DHABI",
     slug: "abu-dhabi",
@@ -523,6 +523,12 @@ export default {
     slug: "playa-del-inglés",
     image: "https://media.istockphoto.com/photos/resort-town-playa-del-ingles-maspalomas-gran-canaria-picture-id484335974?k=20&m=484335974&s=612x612&w=0&h=Dg3Q1vaOFlnui27o4Fn14VX-bC5zq4epLzEVlDIvrXA=",
   },
+  "playa-del-ingles": {
+    id: 74,
+    title: "Playa del Inglés",
+    slug: "playa-del-ingles",
+    image: "https://media.istockphoto.com/photos/resort-town-playa-del-ingles-maspalomas-gran-canaria-picture-id484335974?k=20&m=484335974&s=612x612&w=0&h=Dg3Q1vaOFlnui27o4Fn14VX-bC5zq4epLzEVlDIvrXA=",
+  },
   pokhara: {
     id: 74,
     title: "Pokhara",
@@ -541,10 +547,10 @@ export default {
     slug: "prague",
     image: "https://wallpaperaccess.com/full/41215.jpg",
   },
-  pärnu: {
+  parnu: {
     id: 74,
     title: "Pärnu",
-    slug: "pärnu",
+    slug: "parnu",
     image: "https://static.visitestonia.com/images/3513227/1600_900_false_false_fc6ecd0c7af2b114646ecdfef2c0f641.jpg",
   },
   riga: {
@@ -584,10 +590,10 @@ export default {
     slug: "san-jose",
     image: "https://img.wallpapersafari.com/desktop/1024/576/1/1/TIywR1.jpg",
   },
-  "sana'a": {
+  "sana": {
     id: 74,
     title: "Sana'a",
-    slug: "sana'a",
+    slug: "sana",
     image: "https://c4.wallpaperflare.com/wallpaper/909/117/129/cities-sana-a-al-saleh-mosque-minaret-wallpaper-preview.jpg",
   },
   seoul: {
@@ -618,7 +624,13 @@ export default {
     id: 74,
     title: "São Paulo",
     slug: "são-paulo",
-    image: "https://wallpaperaccess.com/full/2170265.jpg",
+    image: "https://wallpapercave.com/wp/wp1847424.jpg",
+  },
+  "saopaulo": {
+    id: 74,
+    title: "Sao Paulo",
+    slug: "saopaulo",
+    image: "https://wallpapercave.com/wp/wp1847424.jpg",
   },
   tallinn: {
     id: 74,
@@ -674,13 +686,13 @@ export default {
     slug: "vienna",
     image: "https://wallpapercave.com/wp/wp1969351.jpg",
   },
-  Vilnius: {
+  vilnius: {
     id: 74,
     title: "Vilnius",
     slug: "vilnius",
     image: "https://c4.wallpaperflare.com/wallpaper/5/796/1013/long-exposure-vilnius-cityscape-lithuania-wallpaper-preview.jpg",
   },
-  Warsaw: {
+  warsaw: {
     id: 74,
     title: "Warsaw",
     slug: "warsaw",
