@@ -8,6 +8,7 @@ import styled from "styled-components";
 import data from './data';
 
 export default function CategoryCover({ city, description }) {
+  console.log('data', data)
   let coverImg = require(`../../assets/${data[city]?.image}`)
   return (
     <StyledCover>
