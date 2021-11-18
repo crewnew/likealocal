@@ -10,12 +10,11 @@ function Home({ history }) {
   const handleClick = (slug) => {
     history.push(`/${slug}`);
   };
-
   return (
     <StyledHome>
       {data.map((city) => {
         return (
-          <StyledCity url={city.image} onClick={() => handleClick(city.slug)}>
+          <StyledCity url={require(`../../assets/${city?.image}`).default} onClick={() => handleClick(city.slug)}>
             <StyledContent>
               <h1>{city.title}</h1>
               <p>{city.description}</p>

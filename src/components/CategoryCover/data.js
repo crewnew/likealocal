@@ -360,7 +360,7 @@ export default {
     id: 53,
     title: "Kaasan",
     slug: "kaasan",
-    image: "kaasan.jpg",
+    image: "kaasan.jpeg",
   },
   kaunas: {
     id: 9,
