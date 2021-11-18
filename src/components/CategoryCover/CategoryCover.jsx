@@ -1,3 +1,4 @@
+import { useState, useEffect } from "react";
 import {
   StyledCover,
   StyledLeftSide,
@@ -8,13 +9,20 @@ import styled from "styled-components";
 import data from './data';
 
 export default function CategoryCover({ city, description }) {
+  const [citiesData, setCitiesData] = useState(data)
+
+  useEffect(() => {
+    setCitiesData(data);
+  }, [data])
+
   console.log('city', city)
   console.log('data', data)
+  console.log('citiesData', citiesData)
   console.log('data[city]', data[city])
   console.log('data[city].image', data[city].image)
   return (
     <StyledCover>
-      <StyledCoverImage url={require(`../../assets/${data[city]?.image}`).default}/> 
+      <StyledCoverImage url={require(`../../assets/${citiesData[city]?.image}`).default}/> 
       <StyledLeftSide>
         <StyledCoverQuote>
           {description || `Explore ${city.charAt(0).toUpperCase() + city.slice(1)} with a local guide`}
