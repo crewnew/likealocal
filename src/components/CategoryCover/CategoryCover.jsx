@@ -11,6 +11,7 @@ export default function CategoryCover({ city, description }) {
   console.log('city', city)
   console.log('data', data)
   console.log('data[city]', data[city])
+  console.log('data[city].image', data[city].image)
   return (
     <StyledCover>
       <StyledCoverImage url={require(`../../assets/${data[city]?.image}`).default}/> 
