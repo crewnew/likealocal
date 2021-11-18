@@ -8,10 +8,10 @@ import styled from "styled-components";
 import data from './data';
 
 export default function CategoryCover({ city, description }) {
-  let image = require(`../../assets/${data[city]?.image}`)
+  let coverImg = require(`../../assets/${data[city]?.image}`)
   return (
     <StyledCover>
-      <StyledCoverImage url={image.default}/> 
+      <StyledCoverImage url={coverImg.default}/> 
       <StyledLeftSide>
         <StyledCoverQuote>
           {description || `Explore ${city.charAt(0).toUpperCase() + city.slice(1)} with a local guide`}
