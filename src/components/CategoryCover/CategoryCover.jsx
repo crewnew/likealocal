@@ -9,7 +9,7 @@ import styled from "styled-components";
 import data from './data';
 
 export default function CategoryCover({ city, description }) {
-  const [citiesData, setCitiesData] = useState([])
+  const [citiesData, setCitiesData] = useState(data)
 
   useEffect(() => {
     setCitiesData(data);
