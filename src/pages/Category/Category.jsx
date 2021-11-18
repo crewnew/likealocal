@@ -21,6 +21,7 @@ function Category({ history, match }) {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
+  
   const PLACES_QUERY = gql`
     query PlacesQuery {
       places_place(filter: {city_id: {slug: {_contains: "${match.params.slug}"}}}) {

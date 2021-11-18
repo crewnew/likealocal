@@ -4,15 +4,14 @@ import {
   StyledCoverButton,
   StyledCoverQuote,
 } from "./CategoryCover.style";
-// import CoverImg from "../../assets/category-cover.png";
 import styled from "styled-components";
 import data from './data';
 
 export default function CategoryCover({ city, description }) {
-  console.log("city", city)
+  let image = require(`../../assets/${data[city]?.image}`)
   return (
     <StyledCover>
-      <StyledCoverImage url= {data[city]?.image}/>
+      <StyledCoverImage url={image.default}/> 
       <StyledLeftSide>
         <StyledCoverQuote>
           {description || `Explore ${city.charAt(0).toUpperCase() + city.slice(1)} with a local guide`}
