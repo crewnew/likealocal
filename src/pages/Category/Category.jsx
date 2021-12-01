@@ -1,10 +1,9 @@
 import { withRouter } from "react-router-dom";
 import styled from "styled-components";
 import Slider from "react-slick";
-import { useQuery, gql } from "@apollo/client";
+import { useQuery, gql, InMemoryCache } from "@apollo/client";
 import { useState } from "react";
 
-import Submenu from "../../components/Submenu/Submenu";
 import CategoryCover from "../../components/CategoryCover/CategoryCover";
 import SocialMedia from "../../components/SocialMedia/SocialMedia";
 import Paragraph from "../../components/Paragraph/Paragraph";
@@ -16,15 +15,15 @@ import SideMenu from "../../components/SideMenu/SideMenu";
 import { useEffect } from "react";
 
 function Category({ history, match }) {
-  const [visible, setVisible] = useState(5);
+  const [loadMoreVisible, setLoadMoreVisible] = useState(true);
 
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
-  
+
   const PLACES_QUERY = gql`
-    query PlacesQuery {
-      places_place(filter: {city_id: {slug: {_contains: "${match.params.slug}"}}}) {
+    query PlacesQuery($offset: Int, $limit: Int) {
+      places_place(offset: $offset, limit: $limit, filter: {city_id: {slug: {_contains: "${match.params.slug}"}}}) {
         id
         name
         slug
@@ -46,20 +45,56 @@ function Category({ history, match }) {
     }
   `;
 
-  const { loading, error, data } = useQuery(PLACES_QUERY);
-  
-  useEffect(() => {
-    if(data?.places_place.length === 0) {
-      history.push('/editors/suggest-city')
+  const cache = new InMemoryCache({
+    typePolicies: {
+      Query: {
+        fields: {
+          places_place: {
+            merge(existing = [], incoming) {
+              console.log("existing", existing);
+              console.log("incoming", incoming);
+              return [...existing, ...incoming];
+            },
+          },
+        },
+      },
+    },
+  });
+
+  const { loading, error, data, fetchMore } = useQuery(PLACES_QUERY, {
+    variables: {
+      offset: 0,
+      limit: 10,
     }
-  }, [data])
+  });
+
+  useEffect(() => {
+    if (data?.places_place.length === 0) {
+      history.push("/editors/suggest-city");
+    }
+  }, [data]);
 
   const titleClick = (url) => {
     history.push(url);
   };
 
   const loadMore = () => {
-    setVisible(visible + 5);
+    console.log(
+      "offset: data?.places_place?.length",
+      data?.places_place?.length
+    );
+    fetchMore({
+      variables: {
+        offset: data?.places_place?.length,
+      },
+      updateQuery: (prevResult, { fetchMoreResult }) => {
+        const newData = {places_place: prevResult.places_place.concat(fetchMoreResult.places_place)}
+        if(fetchMoreResult.places_place.length < 10) {
+          setLoadMoreVisible(false)
+        }
+        return newData
+      }
+    });
   };
 
   const settings = {
@@ -84,11 +119,15 @@ function Category({ history, match }) {
       },
     ],
   };
-  const string = match.params.slug.charAt(0).toUpperCase() + match.params.slug.slice(1);
+  const string =
+    match.params.slug.charAt(0).toUpperCase() + match.params.slug.slice(1);
   return (
     <div>
       <SocialMedia />
-      <CategoryCover city={match.params.slug} description={data?.places_place[0]?.city_id?.short_description} />
+      <CategoryCover
+        city={match.params.slug}
+        description={data?.places_place[0]?.city_id?.short_description}
+      />
       {/* <Submenu /> */}
       <Paragraph city={match.params.slug} />
 
@@ -138,10 +177,10 @@ function Category({ history, match }) {
             <SideMenu></SideMenu>
           </StyledSideMenu>
           <StyledCards>
-            {data?.places_place?.slice(0, visible).map((place, index) => {
-              if (!place.visit_reason && !place.short_description) return null;
+            {data?.places_place?.map((place, index) => {
+              // if (!place.visit_reason && !place.short_description) return null;
               return (
-                <div style={{ marginBottom: "20px" }}>
+                <div key={place.name} style={{ marginBottom: "20px" }}>
                   <CardThree
                     title={place.name}
                     slug={place.slug}
@@ -160,7 +199,9 @@ function Category({ history, match }) {
                 </div>
               );
             })}
-            <StyledButton onClick={loadMore}>Load More</StyledButton>
+            {loadMoreVisible ? (
+              <StyledButton onClick={loadMore}>Load More</StyledButton>
+            ): null}
           </StyledCards>
         </StyledCategories>
       </StyledDiv>
